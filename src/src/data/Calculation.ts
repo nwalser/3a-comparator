@@ -17,8 +17,12 @@ type FinancialYear = {
     year: number,
     calculatedChanges: CalculatedChange[],
     assets: CalculatedAsset[],
-    endCapital: number,
     contributions: number,
+
+    totalChanges: number,
+    totalCapital: number,
+    totalFeesPaid: number,
+    totalContributions: number,
 }
 
 type Case = {
@@ -57,8 +61,8 @@ function calculateChange(Capital: number, Change: Change): CalculatedChange {
 }
 
 
-function calculateFinancialYear(Year: number, StartCapital: number, Contributions: number, Strategy: Strategy): FinancialYear {
-    let TotalCapital = StartCapital + Contributions;
+function calculateFinancialYear(Year: number, LastYear: FinancialYear, Contributions: number, Strategy: Strategy): FinancialYear {
+    let TotalCapital = LastYear.totalCapital + Contributions;
 
     let portfolioChanges = Strategy.changes.map(c => calculateChange(TotalCapital, c));
     let calculatedAssets = Strategy.assets.map(asset => {
@@ -71,14 +75,23 @@ function calculateFinancialYear(Year: number, StartCapital: number, Contribution
     });
 
     let totalChanges = 0;
+    let totalFees = 0;
 
     portfolioChanges.forEach(i => {
         totalChanges += i.value;
+
+        if (i.value < 0) {
+            totalFees += i.value;
+        }
     });
 
     calculatedAssets.flat().forEach(i => {
         i.calculatedChanges.forEach(c => {
             totalChanges += c.value;
+
+            if (c.value < 0) {
+                totalFees += c.value;
+            }
         });
     });
 
@@ -86,8 +99,12 @@ function calculateFinancialYear(Year: number, StartCapital: number, Contribution
         year: Year,
         calculatedChanges: portfolioChanges,
         assets: calculatedAssets,
-        endCapital: TotalCapital + totalChanges,
         contributions: Contributions,
+
+        totalChanges: totalChanges,
+        totalCapital: TotalCapital + totalChanges,
+        totalContributions: LastYear.totalContributions + Contributions,
+        totalFeesPaid: LastYear.totalFeesPaid + totalFees
     }
 
     return financialYear;
@@ -103,14 +120,17 @@ function calculateCase(Situation: Situation, Strategy: Strategy): Case {
         if (yearIndex == 0) {
             years.push({
                 year: yearIndex,
-                endCapital: Situation.initialAssets,
+                totalCapital: Situation.initialAssets,
                 assets: [],
                 calculatedChanges: [],
-                contributions: Situation.initialAssets
+                contributions: Situation.initialAssets,
+                totalContributions: Situation.initialAssets,
+                totalFeesPaid: 0,
+                totalChanges: 0,
             });
         } else {
             let prevYear = years[yearIndex - 1];
-            let currentYear = calculateFinancialYear(yearIndex, prevYear.endCapital, Situation.yearlyContributions, Strategy);
+            let currentYear = calculateFinancialYear(yearIndex, prevYear, Situation.yearlyContributions, Strategy);
             years.push(currentYear);
         }
     }
