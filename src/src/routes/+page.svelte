@@ -24,7 +24,9 @@
 	<p>Liquidation Age: {$SituationStore.liquidationAge}</p>
 	<input type="range" min="0" max="65" step="1" bind:value={$SituationStore.liquidationAge} />
 
-	{#each $CalculationsStore as calculation}
-		<StrategyLarge {calculation} />
-	{/each}
+	<div class="grid grid-cols-2">
+		{#each $CalculationsStore as calculation}
+			<StrategyLarge {calculation} />
+		{/each}
+	</div>
 </MainLayout>

@@ -35,7 +35,7 @@ export type Strategy = {
     assets: Asset[],
 }
 
-const Strategies:[Strategy] = [
+const Strategies: [Strategy] = [
     {
         id: 1,
         name: 'Viac Gloabal 100',
@@ -59,7 +59,7 @@ const Strategies:[Strategy] = [
                         name: "Interest",
                         scale: Scale.Relative,
                         direction: Direction.Add,
-                        value: 0.20
+                        value: 0.0020
                     },
                 ]
             }
@@ -74,6 +74,299 @@ const Strategies:[Strategy] = [
                         scale: Scale.Relative,
                         direction: Direction.Add,
                         value: 0.07
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 1,
+        name: 'SGKB 100',
+        provider: "SGKB",
+
+        changes: [
+            {
+                name: "Kontoführungsgebühren",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.002
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 0.01,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
+                    },
+                ]
+            }
+        },
+        {
+            allocationInPercent: 0.99,
+            product: {
+                name: "Fonds",
+                changes: [
+                    {
+                        name: "Performance",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.07
+                    },
+                    {
+                        name: "TER",
+                        scale: Scale.Relative,
+                        direction: Direction.Deduct,
+                        value: 0.0104
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 2,
+        name: 'Viac Gloabal 80',
+        provider: "Viac",
+
+        changes: [
+            {
+                name: "All inclusive Fee",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.0045
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 0.20,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
+                    },
+                ]
+            }
+        },
+        {
+            allocationInPercent: 0.80,
+            product: {
+                name: "Equity",
+                changes: [
+                    {
+                        name: "Performance",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.07
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 2,
+        name: 'Viac Gloabal 60',
+        provider: "Viac",
+
+        changes: [
+            {
+                name: "All inclusive Fee",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.0040
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 0.40,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
+                    },
+                ]
+            }
+        },
+        {
+            allocationInPercent: 0.60,
+            product: {
+                name: "Equity",
+                changes: [
+                    {
+                        name: "Performance",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.07
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 2,
+        name: 'Viac Gloabal 40',
+        provider: "Viac",
+
+        changes: [
+            {
+                name: "All inclusive Fee",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.0028
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 0.60,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
+                    },
+                ]
+            }
+        },
+        {
+            allocationInPercent: 0.40,
+            product: {
+                name: "Equity",
+                changes: [
+                    {
+                        name: "Performance",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.07
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 2,
+        name: 'Viac Gloabal 20',
+        provider: "Viac",
+
+        changes: [
+            {
+                name: "All inclusive Fee",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.0017
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 0.80,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
+                    },
+                ]
+            }
+        },
+        {
+            allocationInPercent: 0.20,
+            product: {
+                name: "Equity",
+                changes: [
+                    {
+                        name: "Performance",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.07
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 2,
+        name: 'Viac Account Plus Global',
+        provider: "Viac",
+
+        changes: [
+            {
+                name: "All inclusive Fee",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.00
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 0.95,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
+                    },
+                ]
+            }
+        },
+        {
+            allocationInPercent: 0.05,
+            product: {
+                name: "Equity",
+                changes: [
+                    {
+                        name: "Performance",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.07
+                    },
+                ]
+            }
+        }]
+    },
+    {
+        id: 2,
+        name: 'Viac 3a Account',
+        provider: "Viac",
+
+        changes: [
+            {
+                name: "All inclusive Fee",
+                scale: Scale.Relative,
+                direction: Direction.Deduct,
+                value: 0.00
+            },
+        ],
+
+        assets: [{
+            allocationInPercent: 1,
+            product: {
+                name: "Cash",
+                changes: [
+                    {
+                        name: "Interest",
+                        scale: Scale.Relative,
+                        direction: Direction.Add,
+                        value: 0.0020
                     },
                 ]
             }

@@ -89,7 +89,7 @@
 	$: calculation, updateChart();
 </script>
 
-<div class="p-4 m-4 bg-gray-300">
+<div class="p-2 m-2 bg-gray-300">
 	<p>{calculation.strategy.name}</p>
 	<p>
 		End Capital: {calculation.normalCase.years[
@@ -98,21 +98,4 @@
 	</p>
 
 	<Chart bind:chart type="bar" {data} {options} />
-
-	{#each calculation.normalCase.years as year}
-		<div class="mb-4">
-			<p>
-				{year.year} - End Capital: {year.totalCapital.toFixed(2)} (Contributions: {year.contributions}
-				CHF)
-			</p>
-			{#each year.calculatedChanges as changes}
-				<p>{changes.name}: {changes.value.toFixed(2)} CHF</p>
-			{/each}
-			{#each year.assets as assets}
-				{#each assets.calculatedChanges as changes}
-					<p>{changes.name}: {changes.value.toFixed(2)} CHF</p>
-				{/each}
-			{/each}
-		</div>
-	{/each}
 </div>
