@@ -37,6 +37,8 @@
 		"@tailwindcss/typography": "^0.5.9",
 		"@types/chart.js": "^2.9.37",
 		"chart.js": "^4.2.0",
+		"class-transformer": "^0.5.1",
+		"reflect-metadata": "^0.1.13",
 		"svelte-chartjs": "^3.1.2",
 		"tailwind-scrollbar": "^2.1.0"
 	}

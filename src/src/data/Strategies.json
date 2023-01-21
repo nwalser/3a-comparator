@@ -1,0 +1,74 @@
+[
+    {
+        "provider": "Viac",
+        "name": "Global 100",
+        "stockAllocation": 0.99,
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0045,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.99,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.01,
+                "value": 0.002,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global 80",
+        "stockAllocation": 0.80,
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0045,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.80,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.20,
+                "value": 0.002,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global 60",
+        "stockAllocation": 0.60,
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0040,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.60,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.40,
+                "value": 0.002,
+                "__type": "Interest"
+            }
+        ]
+    }
+]
