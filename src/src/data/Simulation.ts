@@ -89,6 +89,8 @@ export class Strategy {
     provider: string = "";
     name: string = "";
 
+    stockAllocation: number = 0;
+
     @Type(() => Change, {
         discriminator: {
             property: '__type',
@@ -123,27 +125,33 @@ class SimulationYear {
     totalEquity: number = 0;
 }
 
-class AggregatedSimulationResult {
-    totalStockPerformance: number = 0;
-    totalBondPerformance: number = 0;
-    totalFees: number = 0;
-    totalInterest: number = 0;
+export class SimulationResult {
+    calculatedYears: SimulationYear[] = [];
+    strategy: Strategy;
+    parameters: SimulationParameters;
 
-    totalEquity: number = 0;
+    lastYear(): SimulationYear | undefined {
+        return this.calculatedYears[this.calculatedYears.length-1];
+    }
+
+    constructor (strategy: Strategy, parameters: SimulationParameters){
+        this.strategy = strategy;
+        this.parameters = parameters;
+    }
 }
 
 export class Simulation {
     strategy: Strategy;
     parameters!: SimulationParameters | null;
 
-    simulationResult!: AggregatedSimulationResult | null;
+    simulationResult!: SimulationResult | null;
     calculatedYears!: SimulationYear[] | null;
 
     constructor(strategy: Strategy) {
         this.strategy = strategy;
     }
 
-    run(parameters: SimulationParameters) {
+    run(parameters: SimulationParameters) : SimulationResult {
         this.parameters = parameters;
         this.calculatedYears = [];
 
@@ -160,14 +168,32 @@ export class Simulation {
 
             this.calculatedYears.push(thisYear);
         }
+
+        let simulationResult = new SimulationResult(this.strategy, this.parameters);
+        simulationResult.calculatedYears = this.calculatedYears;
+
+        return simulationResult;
     }
 
     private calculateNextYear(parameters: SimulationParameters, prevYear: SimulationYear): SimulationYear {
         let thisYear = new SimulationYear();
+        thisYear.year = prevYear.year+1;
 
         this.strategy.changes.forEach(change => {
             thisYear = change.forecastYear(parameters, prevYear, thisYear);
+            thisYear.contributions = parameters.yearlyContributions;
         });
+
+        thisYear.totalContributions = prevYear.totalContributions + thisYear.contributions;
+
+        thisYear.totalBondPerformance = prevYear.totalBondPerformance + thisYear.bondPerformance;
+        thisYear.totalStockPerformance = prevYear.totalStockPerformance + thisYear.stockPerformance;
+
+        thisYear.totalInterest = prevYear.totalInterest + thisYear.interest;
+
+        thisYear.totalFees = prevYear.totalFees + thisYear.fees;
+
+        thisYear.totalEquity = prevYear.totalEquity + (thisYear.contributions + thisYear.bondPerformance + thisYear.stockPerformance + thisYear.interest + thisYear.fees);
 
         return thisYear;
     }

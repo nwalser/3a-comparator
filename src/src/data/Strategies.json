@@ -2,6 +2,7 @@
     {
         "provider": "Viac",
         "name": "Global 100",
+        "stockAllocation": 0.99,
         "changes": [
             {
                 "name": "All inclusive Fee",
@@ -25,6 +26,7 @@
     {
         "provider": "Viac",
         "name": "Global 80",
+        "stockAllocation": 0.80,
         "changes": [
             {
                 "name": "All inclusive Fee",
@@ -48,6 +50,7 @@
     {
         "provider": "Viac",
         "name": "Global 60",
+        "stockAllocation": 0.60,
         "changes": [
             {
                 "name": "All inclusive Fee",

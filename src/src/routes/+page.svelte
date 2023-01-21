@@ -7,7 +7,7 @@
 	import { plainToInstance  } from 'class-transformer';
 
 
-	import strats from 'src/data/Strats.json';
+	import strats from 'src/data/Strategies.json';
 
 
 	let stratJson = JSON.stringify(plainToInstance(Strategy, strats))
