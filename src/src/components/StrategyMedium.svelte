@@ -91,7 +91,7 @@
 </script>
 
 <div class="rounded-lg bg-white shadow mb-4 relative overflow-hidden h-52">
-	<div class="z-20 relative flex align-middle justify-start items-center px-5 py-6 bg-white rounded-md bg-opacity-70 w-fit">
+	<div class="z-20 relative flex align-middle justify-start items-center px-5 py-6 w-fit">
 		<img src="/logos/viac.png" alt="" class="w-16 h-16 object-cover mr-2" />
 
 		<div>

@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tailwindcss/forms": "^0.5.3",
 		"@tailwindcss/typography": "^0.5.9",
 		"@types/chart.js": "^2.9.37",
 		"chart.js": "^4.2.0",
