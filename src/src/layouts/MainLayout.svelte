@@ -21,7 +21,7 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col overflow-hidden">
-	<div class="bg-orange-200 relative z-0 overflow-hidden" style="padding-bottom: {pb / 4}rem;">
+	<div class="bg-slate-800 relative z-0 overflow-hidden" style="padding-bottom: {pb / 4}rem;">
 		<nav>
 			<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 				<div class="border-b border-gray-700">
