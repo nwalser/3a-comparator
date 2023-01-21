@@ -1,0 +1,132 @@
+<script lang="ts">
+	import type { Calculation } from '../data/Calculation';
+	import { Chart } from 'svelte-chartjs';
+	import colors from 'tailwindcss/colors';
+	import 'chart.js/auto';
+
+	export let calculation: Calculation;
+	export let bestValue: number;
+
+	let chart: any;
+	var data = {};
+	let totalFees = 0;
+	let probableEndCapital = 0;
+	let differenceToBest = 0;
+	let options = {
+		responsive: true,
+		maintainAspectRatio: false,
+		layout: {
+			padding: 0
+		},
+		plugins: {
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			}
+		},
+		scales: {
+			x: {
+				stacked: true,
+				display: false
+			},
+			y: {
+				stacked: true,
+				display: false
+			}
+		},
+		animation: false
+	};
+	let SwissFrancFormat = new Intl.NumberFormat('de-CH', {
+		style: 'currency',
+		currency: 'CHF'
+	});
+
+	function updateChart() {
+		data = {
+			labels: calculation.normalCase.years.map((y) => y.year),
+			datasets: [
+				{
+					label: 'Total Gebühren',
+					data: calculation.normalCase.years.map((y) => {
+						return y.totalFeesPaid - y.feesPaid;
+					}),
+					backgroundColor: colors.red[400],
+					barPercentage: 1.3
+				},
+				{
+					label: 'Gebühren',
+					data: calculation.normalCase.years.map((y) => y.feesPaid),
+					backgroundColor: colors.red[500],
+					barPercentage: 1.3
+				},
+				{
+					label: 'Total Einzahlungen',
+					data: calculation.normalCase.years.map((y) => {
+						return y.totalContributions - y.contributions;
+					}),
+					backgroundColor: colors.gray[400],
+					barPercentage: 1.3
+				},
+				{
+					label: 'Einzahlung',
+					data: calculation.normalCase.years.map((y) => y.contributions),
+					backgroundColor: colors.gray[500],
+					barPercentage: 1.3
+				},
+				{
+					label: 'Total Kursgewinne',
+					data: calculation.normalCase.years.map((y) => {
+						return y.totalCapital - y.totalContributions;
+					}),
+					backgroundColor: colors.green[400],
+					barPercentage: 1.3
+				},
+				{
+					label: 'Kursgewinne',
+					data: calculation.normalCase.years.map((y) => y.totalChanges),
+					backgroundColor: colors.green[500],
+					barPercentage: 1.3
+				}
+			]
+		};
+	}
+
+	function updateCapital() {
+		totalFees = calculation.normalCase.years[calculation.normalCase.years.length - 1].totalFeesPaid;
+		probableEndCapital =
+			calculation.normalCase.years[calculation.normalCase.years.length - 1].totalCapital;
+		differenceToBest = probableEndCapital - bestValue;
+	}
+
+	$: calculation, updateCapital();
+	$: calculation, updateChart();
+</script>
+
+<div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6 mb-4 relative overflow-hidden h-52">
+	<div class="z-20 relative w-full h-full">
+		<img src="/logos/viac.png" alt="" class="w-24 h-24 object-cover" />
+
+		<p class="text-2xl font-bold">{calculation.strategy.provider} - {calculation.strategy.name}</p>
+		<p>
+			Warscheinliches Endkapital: <span class="text-green-600 font-bold"
+				>{SwissFrancFormat.format(probableEndCapital)}</span
+			>
+		</p>
+		<p>
+			Differenz zur besten Strategie: <span class="text-red-600 font-bold"
+				>{SwissFrancFormat.format(differenceToBest)}</span
+			>
+		</p>
+		<p>
+			Total Gebühren: <span class="text-red-600"
+				>{SwissFrancFormat.format(totalFees)}</span
+			>
+		</p>
+	</div>
+
+	<div class="z-0 absolute bottom-0 right-0 w-full h-44 -m-1">
+		<Chart bind:chart type="bar" {data} {options} />
+	</div>
+</div>

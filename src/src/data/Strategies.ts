@@ -35,10 +35,10 @@ export type Strategy = {
     assets: Asset[],
 }
 
-const Strategies: [Strategy] = [
+const Strategies: Strategy[] = [
     {
         id: 1,
-        name: 'Viac Gloabal 100',
+        name: 'Global 100',
         provider: "Viac",
 
         changes: [
@@ -130,7 +130,7 @@ const Strategies: [Strategy] = [
     },
     {
         id: 2,
-        name: 'Viac Gloabal 80',
+        name: 'Global 80',
         provider: "Viac",
 
         changes: [
@@ -173,7 +173,7 @@ const Strategies: [Strategy] = [
     },
     {
         id: 2,
-        name: 'Viac Gloabal 60',
+        name: 'Global 60',
         provider: "Viac",
 
         changes: [
@@ -216,7 +216,7 @@ const Strategies: [Strategy] = [
     },
     {
         id: 2,
-        name: 'Viac Gloabal 40',
+        name: 'Global 40',
         provider: "Viac",
 
         changes: [
@@ -259,7 +259,7 @@ const Strategies: [Strategy] = [
     },
     {
         id: 2,
-        name: 'Viac Gloabal 20',
+        name: 'Global 20',
         provider: "Viac",
 
         changes: [
@@ -305,14 +305,7 @@ const Strategies: [Strategy] = [
         name: 'Viac Account Plus Global',
         provider: "Viac",
 
-        changes: [
-            {
-                name: "All inclusive Fee",
-                scale: Scale.Relative,
-                direction: Direction.Deduct,
-                value: 0.00
-            },
-        ],
+        changes: [],
 
         assets: [{
             allocationInPercent: 0.95,
@@ -348,14 +341,7 @@ const Strategies: [Strategy] = [
         name: 'Viac 3a Account',
         provider: "Viac",
 
-        changes: [
-            {
-                name: "All inclusive Fee",
-                scale: Scale.Relative,
-                direction: Direction.Deduct,
-                value: 0.00
-            },
-        ],
+        changes: [],
 
         assets: [{
             allocationInPercent: 1,

@@ -18,6 +18,7 @@ type FinancialYear = {
     calculatedChanges: CalculatedChange[],
     assets: CalculatedAsset[],
     contributions: number,
+    feesPaid: number,
 
     totalChanges: number,
     totalCapital: number,
@@ -104,7 +105,8 @@ function calculateFinancialYear(Year: number, LastYear: FinancialYear, Contribut
         totalChanges: totalChanges,
         totalCapital: TotalCapital + totalChanges,
         totalContributions: LastYear.totalContributions + Contributions,
-        totalFeesPaid: LastYear.totalFeesPaid + totalFees
+        totalFeesPaid: LastYear.totalFeesPaid + totalFees,
+        feesPaid: totalFees
     }
 
     return financialYear;
@@ -127,6 +129,7 @@ function calculateCase(Situation: Situation, Strategy: Strategy): Case {
                 totalContributions: Situation.initialAssets,
                 totalFeesPaid: 0,
                 totalChanges: 0,
+                feesPaid: 0,
             });
         } else {
             let prevYear = years[yearIndex - 1];
@@ -154,6 +157,8 @@ const CalculationsStore = derived(
                 normalCase: calculateCase($SituationStore, strategy)
             }
         })
+
+        calculations.sort(function (a, b) { return b.normalCase.years[b.normalCase.years.length - 1].totalCapital - a.normalCase.years[a.normalCase.years.length - 1].totalCapital });
 
         return calculations
     })

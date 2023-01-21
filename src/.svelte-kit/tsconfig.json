@@ -1,6 +1,13 @@
 {
 	"compilerOptions": {
-		"paths": {},
+		"paths": {
+			"src": [
+				"../src"
+			],
+			"src/*": [
+				"../src/*"
+			]
+		},
 		"rootDirs": [
 			"..",
 			"./types"
