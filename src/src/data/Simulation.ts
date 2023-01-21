@@ -2,13 +2,21 @@ import { Type } from "class-transformer";
 
 import "reflect-metadata";
 
-class SimulationParameters {
-    initialAssetValue: number = 0;
-    yearlyContributions: number = 0;
-    yearRuntime: number = 1;
+export class SimulationParameters {
+    initialAssetValue: number;
+    yearlyContributions: number;
+    yearRuntime: number;
 
-    averageStockPerformance: number = 6;
-    averageBondPerformance: number = 2;
+    averageStockPerformance: number;
+    averageBondPerformance: number;
+
+    constructor(initialAssetValue: number, yearlyContributions: number, yearRuntime: number, averageStockPerformance: number, averageBondPerformance: number) {
+        this.initialAssetValue = initialAssetValue;
+        this.yearlyContributions = yearlyContributions;
+        this.yearRuntime = yearRuntime;
+        this.averageStockPerformance = averageStockPerformance;
+        this.averageBondPerformance = averageBondPerformance;
+    }
 }
 
 
@@ -83,16 +91,16 @@ export class Strategy {
 
     @Type(() => Change, {
         discriminator: {
-          property: '__type',
-          subTypes: [
-            { value: StockPerformance, name: 'StockPerformance' },
-            { value: BondPerformance, name: 'BondPerformance' },
-            { value: RelativeFee, name: 'RelativeFee' },
-            { value: AbsoluteFee, name: 'AbsoluteFee' },
-            { value: Interest, name: 'Interest' },
-          ],
+            property: '__type',
+            subTypes: [
+                { value: StockPerformance, name: 'StockPerformance' },
+                { value: BondPerformance, name: 'BondPerformance' },
+                { value: RelativeFee, name: 'RelativeFee' },
+                { value: AbsoluteFee, name: 'AbsoluteFee' },
+                { value: Interest, name: 'Interest' },
+            ],
         },
-      })
+    })
     changes: Change[] = [];
 }
 

@@ -1,20 +1,25 @@
-import { writable } from 'svelte/store';
-
-export type Situation = {
-    age: number,
-    yearlyContributions: number,
-    initialAssets: number,
-    liquidationAge: number
-}
+import { derived, writable } from 'svelte/store';
+import { SimulationParameters } from './Simulation';
 
 
-const Situation:Situation = {
-    age: 20,
-    yearlyContributions: 7056,
-    initialAssets: 0,
-    liquidationAge: 65    
-}
+export const AgeStore = writable(20);
+export const LiquidationAgeStore = writable(65);
+export const AverageBondPerformanceStore = writable(2.5);
+export const AverageStockPerformanceStore = writable(6);
+export const InitialAssetsStore = writable(0);
+export const YearlyContributionsStore = writable(7056);
 
-const SituationStore = writable(Situation);
 
-export default SituationStore;
+export const PersonalSituationStore = derived(
+    [AgeStore, LiquidationAgeStore, AverageBondPerformanceStore, AverageStockPerformanceStore, InitialAssetsStore, YearlyContributionsStore],
+    ([$age, $liquidationAge, $averageBondPerformance, $averageStockPerformance, $initialAssets, $yearlyContributions]) => {
+        let yearRuntime = Math.max($liquidationAge - $age, 0);
+
+        return new SimulationParameters(
+            $initialAssets,
+            $yearlyContributions,
+            yearRuntime,
+            $averageStockPerformance,
+            $averageBondPerformance
+        );
+    })
