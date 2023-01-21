@@ -48,20 +48,6 @@
 			labels: calculation.normalCase.years.map((y) => y.year),
 			datasets: [
 				{
-					label: 'Total Gebühren',
-					data: calculation.normalCase.years.map((y) => {
-						return y.totalFeesPaid - y.feesPaid;
-					}),
-					backgroundColor: colors.red[400],
-					barPercentage: 1.3
-				},
-				{
-					label: 'Gebühren',
-					data: calculation.normalCase.years.map((y) => y.feesPaid),
-					backgroundColor: colors.red[500],
-					barPercentage: 1.3
-				},
-				{
 					label: 'Total Einzahlungen',
 					data: calculation.normalCase.years.map((y) => {
 						return y.totalContributions - y.contributions;
@@ -104,29 +90,31 @@
 	$: calculation, updateChart();
 </script>
 
-<div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6 mb-4 relative overflow-hidden h-52">
-	<div class="z-20 relative w-full h-full">
-		<img src="/logos/viac.png" alt="" class="w-24 h-24 object-cover" />
+<div class="rounded-lg bg-white shadow mb-4 relative overflow-hidden h-52">
+	<div class="z-20 relative flex align-middle justify-start items-center px-5 py-6 bg-white rounded-md bg-opacity-70 w-fit">
+		<img src="/logos/viac.png" alt="" class="w-16 h-16 object-cover mr-2" />
 
-		<p class="text-2xl font-bold">{calculation.strategy.provider} - {calculation.strategy.name}</p>
-		<p>
-			Warscheinliches Endkapital: <span class="text-green-600 font-bold"
-				>{SwissFrancFormat.format(probableEndCapital)}</span
-			>
-		</p>
-		<p>
-			Differenz zur besten Strategie: <span class="text-red-600 font-bold"
-				>{SwissFrancFormat.format(differenceToBest)}</span
-			>
-		</p>
-		<p>
-			Total Gebühren: <span class="text-red-600"
-				>{SwissFrancFormat.format(totalFees)}</span
-			>
-		</p>
+		<div>
+			<p class="text-2xl">
+				<span class="font-bold">{calculation.strategy.provider}</span> - <span>{calculation.strategy.name}</span>
+			</p>
+			<p>
+				Warscheinliches Endkapital: <span class="text-green-600 font-bold"
+					>{SwissFrancFormat.format(probableEndCapital)}</span
+				>
+			</p>
+			<p>
+				Differenz zur besten Strategie: <span class="text-red-600 font-bold"
+					>{SwissFrancFormat.format(differenceToBest)}</span
+				>
+			</p>
+			<p>
+				Total Gebühren: <span class="text-red-600">{SwissFrancFormat.format(totalFees)}</span>
+			</p>
+		</div>
 	</div>
 
-	<div class="z-0 absolute bottom-0 right-0 w-full h-44 -m-1">
+	<div class="z-0 absolute bottom-0 right-0 w-full h-44">
 		<Chart bind:chart type="bar" {data} {options} />
 	</div>
 </div>
