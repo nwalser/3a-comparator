@@ -2,6 +2,8 @@
     {
         "provider": "Viac",
         "name": "Global 100",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
         "allocations": {
             "stocks": 0.99,
             "bonds": 0.00,
@@ -23,7 +25,7 @@
             {
                 "name": "Cash Interest",
                 "affectedEquityPercentage": 0.01,
-                "value": 0.002,
+                "value": 0.0005,
                 "__type": "Interest"
             }
         ]
@@ -31,6 +33,8 @@
     {
         "provider": "Viac",
         "name": "Global 80",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
         "allocations": {
             "stocks": 0.80,
             "bonds": 0.00,
@@ -52,7 +56,7 @@
             {
                 "name": "Cash Interest",
                 "affectedEquityPercentage": 0.20,
-                "value": 0.002,
+                "value": 0.0005,
                 "__type": "Interest"
             }
         ]
@@ -60,6 +64,8 @@
     {
         "provider": "Viac",
         "name": "Global 60",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
         "allocations": {
             "stocks": 0.60,
             "bonds": 0.00,
@@ -81,7 +87,503 @@
             {
                 "name": "Cash Interest",
                 "affectedEquityPercentage": 0.40,
-                "value": 0.002,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global 40",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.40,
+            "bonds": 0.00,
+            "cash": 0.60,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.00058,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.40,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.60,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global 20",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.20,
+            "bonds": 0.00,
+            "cash": 0.80,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0017,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.20,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.80,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Konto Plus Global",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.05,
+            "bonds": 0.00,
+            "cash": 0.95,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.00,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.05,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.95,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "3a Konto",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.00,
+            "bonds": 0.00,
+            "cash": 1.00,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.00,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.00,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Konto Plus Schweiz",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.05,
+            "bonds": 0.00,
+            "cash": 0.95,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.00,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.05,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.95,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Schweiz 20",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.20,
+            "bonds": 0.00,
+            "cash": 0.80,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0017,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.20,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.80,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Schweiz 40",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.40,
+            "bonds": 0.00,
+            "cash": 0.60,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.00058,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.40,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.60,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Schweiz 60",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.60,
+            "bonds": 0.00,
+            "cash": 0.40,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.60,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.40,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Schweiz 80",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.80,
+            "bonds": 0.00,
+            "cash": 0.20,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0046,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.80,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.20,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Schweiz 100",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.99,
+            "bonds": 0.00,
+            "cash": 0.01,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0047,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.99,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.01,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Konto Plus Nachhaltig",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.05,
+            "bonds": 0.00,
+            "cash": 0.95,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.00,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.05,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.95,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global Nachhaltig 20",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.20,
+            "bonds": 0.00,
+            "cash": 0.80,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0016,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.20,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.80,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global Nachhaltig 40",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.40,
+            "bonds": 0.00,
+            "cash": 0.60,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0027,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.40,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.60,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global Nachhaltig 60",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.60,
+            "bonds": 0.00,
+            "cash": 0.40,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0038,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.60,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.40,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global Nachhaltig 80",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.80,
+            "bonds": 0.00,
+            "cash": 0.20,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0047,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.80,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.20,
+                "value": 0.0005,
+                "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "Viac",
+        "name": "Global Nachhaltig 100",
+        "abbreviation": "Viac",
+        "logo": "viac.png",
+        "allocations": {
+            "stocks": 0.99,
+            "bonds": 0.00,
+            "cash": 0.01,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0047,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.99,
+                "__type": "StockPerformance"
+            },
+            {
+                "name": "Cash Interest",
+                "affectedEquityPercentage": 0.01,
+                "value": 0.0005,
                 "__type": "Interest"
             }
         ]
