@@ -2,7 +2,12 @@
     {
         "provider": "Viac",
         "name": "Global 100",
-        "stockAllocation": 0.99,
+        "allocations": {
+            "stocks": 0.99,
+            "bonds": 0.00,
+            "cash": 0.01,
+            "realEstate": 0.00
+        },
         "changes": [
             {
                 "name": "All inclusive Fee",
@@ -26,7 +31,12 @@
     {
         "provider": "Viac",
         "name": "Global 80",
-        "stockAllocation": 0.80,
+        "allocations": {
+            "stocks": 0.80,
+            "bonds": 0.00,
+            "cash": 0.20,
+            "realEstate": 0.00
+        },
         "changes": [
             {
                 "name": "All inclusive Fee",
@@ -50,7 +60,12 @@
     {
         "provider": "Viac",
         "name": "Global 60",
-        "stockAllocation": 0.60,
+        "allocations": {
+            "stocks": 0.60,
+            "bonds": 0.00,
+            "cash": 0.40,
+            "realEstate": 0.00
+        },
         "changes": [
             {
                 "name": "All inclusive Fee",

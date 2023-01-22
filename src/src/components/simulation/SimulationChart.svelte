@@ -2,9 +2,15 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { Simulation, SimulationResult } from 'src/data/Simulation';
+	import type { SimulationResult } from 'src/data/Simulation';
+	import { AgeStore } from 'src/data/SimulationStore';
 
 	export let simulation: SimulationResult;
+
+	let chf = new Intl.NumberFormat('de-CH', {
+		style: 'currency',
+		currency: 'CHF'
+	});
 
 	let chart: any;
 	var data = {};
@@ -20,7 +26,22 @@
 			},
 			legend: {
 				display: false
-			}
+			},
+			tooltip: {
+                callbacks: {
+                    label: function(context: any) {
+                        let label = context.dataset.label || '';
+
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y !== null) {
+                            label += chf.format(context.parsed.y);
+                        }
+                        return label;
+                    }
+                }
+            }
 		},
 		scales: {
 			x: {
@@ -37,7 +58,7 @@
 
 	function updateChart() {
 		data = {
-			labels: simulation.calculatedYears.map((y) => y.year),
+			labels: simulation.calculatedYears.map((y) => y.year + $AgeStore),
 			datasets: [
 				{
 					label: 'Total Einzahlungen',
@@ -63,7 +84,9 @@
 				},
 				{
 					label: 'Kursgewinne',
-					data: simulation.calculatedYears.map((y) => y.bondPerformance + y.interest + y.stockPerformance),
+					data: simulation.calculatedYears.map(
+						(y) => y.bondPerformance + y.interest + y.stockPerformance
+					),
 					backgroundColor: colors.green[500],
 					barPercentage: 1.3
 				}
@@ -71,7 +94,7 @@
 		};
 	}
 
-    $: simulation, updateChart();
+	$: simulation, updateChart();
 </script>
 
 <Chart bind:chart type="bar" {data} {options} />
