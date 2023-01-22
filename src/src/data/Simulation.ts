@@ -9,13 +9,15 @@ export class SimulationParameters {
 
     averageStockPerformance: number;
     averageBondPerformance: number;
+    averageRealEstatePerformance: number;
 
-    constructor(initialAssetValue: number, yearlyContributions: number, yearRuntime: number, averageStockPerformance: number, averageBondPerformance: number) {
+    constructor(initialAssetValue: number, yearlyContributions: number, yearRuntime: number, averageStockPerformance: number, averageBondPerformance: number, averageRealEstatePerformance: number) {
         this.initialAssetValue = initialAssetValue;
         this.yearlyContributions = yearlyContributions;
         this.yearRuntime = yearRuntime;
         this.averageStockPerformance = averageStockPerformance;
         this.averageBondPerformance = averageBondPerformance;
+        this.averageRealEstatePerformance = averageRealEstatePerformance;
     }
 }
 
@@ -95,6 +97,8 @@ export type Allocations = {
 
 export class Strategy {
     provider: string = "";
+    abbreviation: string = "";
+    logo: string = "";
     name: string = "";
 
     allocations: Allocations = {

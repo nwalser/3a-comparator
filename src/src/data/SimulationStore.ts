@@ -1,4 +1,4 @@
-import { derived, readable, writable } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 import { Simulation, SimulationParameters, SimulationResult, Strategy } from './Simulation';
 import strategies from 'src/data/Strategies.json';
 import { plainToInstance } from 'class-transformer';
@@ -7,6 +7,8 @@ import { plainToInstance } from 'class-transformer';
 export const AgeStore = writable(20);
 export const LiquidationAgeStore = writable(65);
 export const AverageBondPerformanceStore = writable(2.5);
+export const AverageRealEstatePerformanceStore = writable(4);
+
 export const AverageStockPerformanceStore = writable(6);
 export const InitialAssetsStore = writable(0);
 export const YearlyContributionsStore = writable(7056);
@@ -19,8 +21,8 @@ export const MaximalCashAllocationStore = writable(100);
 export const StrategiesStore = writable(plainToInstance(Strategy, strategies));
 
 export const SimulationParametersStore = derived(
-    [AgeStore, LiquidationAgeStore, AverageBondPerformanceStore, AverageStockPerformanceStore, InitialAssetsStore, YearlyContributionsStore],
-    ([$age, $liquidationAge, $averageBondPerformance, $averageStockPerformance, $initialAssets, $yearlyContributions]) => {
+    [AgeStore, LiquidationAgeStore, AverageBondPerformanceStore, AverageStockPerformanceStore, InitialAssetsStore, YearlyContributionsStore, AverageRealEstatePerformanceStore],
+    ([$age, $liquidationAge, $averageBondPerformance, $averageStockPerformance, $initialAssets, $yearlyContributions, $averageRealEstatePerformance]) => {
         let yearRuntime = Math.max($liquidationAge - $age, 0);
 
         return new SimulationParameters(
@@ -28,7 +30,8 @@ export const SimulationParametersStore = derived(
             $yearlyContributions,
             yearRuntime,
             $averageStockPerformance / 100,
-            $averageBondPerformance / 100
+            $averageBondPerformance / 100,
+            $averageRealEstatePerformance / 100,
         );
     })
 
