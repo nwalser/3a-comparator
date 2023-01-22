@@ -2,7 +2,7 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { Simulation, SimulationResult } from 'src/data/Simulation';
+	import type { SimulationResult } from 'src/data/Simulation';
 
 	export let simulation: SimulationResult;
 
@@ -63,7 +63,9 @@
 				},
 				{
 					label: 'Kursgewinne',
-					data: simulation.calculatedYears.map((y) => y.bondPerformance + y.interest + y.stockPerformance),
+					data: simulation.calculatedYears.map(
+						(y) => y.bondPerformance + y.interest + y.stockPerformance
+					),
 					backgroundColor: colors.green[500],
 					barPercentage: 1.3
 				}
@@ -71,7 +73,7 @@
 		};
 	}
 
-    $: simulation, updateChart();
+	$: simulation, updateChart();
 </script>
 
 <Chart bind:chart type="bar" {data} {options} />

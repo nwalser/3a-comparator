@@ -1,7 +1,7 @@
 <script>
 	import Hero from 'src/components/headers/Hero.svelte';
 	import TwoColumnLayout from 'src/layouts/TwoColumnLayout.svelte';
-	import StrategyMedium from 'src/components/SimulationMedium.svelte';
+	import StrategyMedium from 'src/components/simulation/SimulationMedium.svelte';
 	import AveragePerformance from 'src/components/simulation/AveragePerformance.svelte';
 	import Filters from 'src/components/simulation/Filters.svelte';
 	import PersonalSituation from 'src/components/simulation/PersonalSituation.svelte';
@@ -14,7 +14,7 @@
 		<Hero src="" alt="programmer working at desk in office" />
 	</span>
 	<span slot="body">
-		<div class="grid grid-cols-1">
+		<div class="grid grid-cols-1 gap-4">
 			{#each $FilteredSimulationResultsStore as simulationResult (simulationResult.strategy.provider + simulationResult.strategy.name)}
 				<div animate:flip="{{delay: 0, duration: 500}}">
 					<StrategyMedium simulation={simulationResult} bestSimulation={$BestSimulationStore} />
