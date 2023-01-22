@@ -79,16 +79,21 @@
 				{
 					label: 'Total Kursgewinne',
 					data: simulation.calculatedYears.map((y) => {
-						return y.totalBondPerformance + y.totalInterest + y.totalStockPerformance;
+						return (
+							y.totalBondPerformance +
+							y.totalInterest +
+							y.totalStockPerformance +
+							y.totalRealEstatePerformance
+						);
 					}),
 					backgroundColor: colors.green[400],
 					barPercentage: 1.3
 				},
 				{
 					label: 'Kursgewinne',
-					data: simulation.calculatedYears.map(
-						(y) => y.bondPerformance + y.interest + y.stockPerformance
-					),
+					data: simulation.calculatedYears.map((y) => {
+						return y.bondPerformance + y.interest + y.stockPerformance + y.realEstatePerformance;
+					}),
 					backgroundColor: colors.green[500],
 					barPercentage: 1.3
 				},

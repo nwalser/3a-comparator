@@ -28,20 +28,20 @@
 				display: false
 			},
 			tooltip: {
-                callbacks: {
-                    label: function(context: any) {
-                        let label = context.dataset.label || '';
+				callbacks: {
+					label: function (context: any) {
+						let label = context.dataset.label || '';
 
-                        if (label) {
-                            label += ': ';
-                        }
-                        if (context.parsed.y !== null) {
-                            label += chf.format(context.parsed.y);
-                        }
-                        return label;
-                    }
-                }
-            }
+						if (label) {
+							label += ': ';
+						}
+						if (context.parsed.y !== null) {
+							label += chf.format(context.parsed.y);
+						}
+						return label;
+					}
+				}
+			}
 		},
 		scales: {
 			x: {
@@ -77,16 +77,21 @@
 				{
 					label: 'Total Kursgewinne',
 					data: simulation.calculatedYears.map((y) => {
-						return y.totalBondPerformance + y.totalInterest + y.totalStockPerformance;
+						return (
+							y.totalBondPerformance +
+							y.totalInterest +
+							y.totalStockPerformance +
+							y.totalRealEstatePerformance
+						);
 					}),
 					backgroundColor: colors.green[400],
 					barPercentage: 1.3
 				},
 				{
 					label: 'Kursgewinne',
-					data: simulation.calculatedYears.map(
-						(y) => y.bondPerformance + y.interest + y.stockPerformance
-					),
+					data: simulation.calculatedYears.map((y) => {
+						return y.bondPerformance + y.interest + y.stockPerformance + y.realEstatePerformance;
+					}),
 					backgroundColor: colors.green[500],
 					barPercentage: 1.3
 				}
