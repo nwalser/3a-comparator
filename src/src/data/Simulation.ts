@@ -85,11 +85,24 @@ export class Interest extends Change {
     }
 }
 
+
+export type Allocations = {
+    stocks: number;
+    bonds: number;
+    realEstate: number;
+    cash: number;
+}
+
 export class Strategy {
     provider: string = "";
     name: string = "";
 
-    stockAllocation: number = 0;
+    allocations: Allocations = {
+        stocks: 0,
+        bonds: 0,
+        realEstate: 0,
+        cash: 0
+    };
 
     @Type(() => Change, {
         discriminator: {
@@ -131,10 +144,10 @@ export class SimulationResult {
     parameters: SimulationParameters;
 
     lastYear(): SimulationYear | undefined {
-        return this.calculatedYears[this.calculatedYears.length-1];
+        return this.calculatedYears[this.calculatedYears.length - 1];
     }
 
-    constructor (strategy: Strategy, parameters: SimulationParameters){
+    constructor(strategy: Strategy, parameters: SimulationParameters) {
         this.strategy = strategy;
         this.parameters = parameters;
     }
@@ -151,7 +164,7 @@ export class Simulation {
         this.strategy = strategy;
     }
 
-    run(parameters: SimulationParameters) : SimulationResult {
+    run(parameters: SimulationParameters): SimulationResult {
         this.parameters = parameters;
         this.calculatedYears = [];
 
@@ -177,7 +190,7 @@ export class Simulation {
 
     private calculateNextYear(parameters: SimulationParameters, prevYear: SimulationYear): SimulationYear {
         let thisYear = new SimulationYear();
-        thisYear.year = prevYear.year+1;
+        thisYear.year = prevYear.year + 1;
 
         this.strategy.changes.forEach(change => {
             thisYear = change.forecastYear(parameters, prevYear, thisYear);

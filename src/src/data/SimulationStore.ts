@@ -12,6 +12,9 @@ export const InitialAssetsStore = writable(0);
 export const YearlyContributionsStore = writable(7056);
 
 export const MaximalStockAllocationStore = writable(100);
+export const MaximalBondAllocationStore = writable(100);
+export const MaximalRealEstateAllocationStore = writable(100);
+export const MaximalCashAllocationStore = writable(100);
 
 export const StrategiesStore = writable(plainToInstance(Strategy, strategies));
 
@@ -39,14 +42,18 @@ export const SimulationResultsStore = derived([SimulationParametersStore, Strate
         simulationResults.push(result);
     });
 
-    simulationResults.sort(function(a, b){return (b.lastYear()?.totalEquity ?? 0) - (a.lastYear()?.totalEquity ?? 0)});
+    simulationResults.sort(function (a, b) { return (b.lastYear()?.totalEquity ?? 0) - (a.lastYear()?.totalEquity ?? 0) });
 
     return simulationResults;
 })
 
-export const FilteredSimulationResultsStore = derived([SimulationResultsStore, MaximalStockAllocationStore], ([$simulationResults, $maximalStockAllocation]) => {
-    return $simulationResults.filter(res => res.strategy.stockAllocation <= $maximalStockAllocation/100);
-})
+export const FilteredSimulationResultsStore = derived([SimulationResultsStore, MaximalStockAllocationStore, MaximalBondAllocationStore, MaximalCashAllocationStore, MaximalRealEstateAllocationStore],
+    ([$simulationResults, $maximalStockAllocation, $maximalBondAllocation, $maximalCashAllocation, $maximalRealEstateAllocation]) => {
+        return $simulationResults.filter(res => res.strategy.allocations.stocks <= $maximalStockAllocation / 100)
+            .filter(res => res.strategy.allocations.bonds <= $maximalBondAllocation / 100)
+            .filter(res => res.strategy.allocations.cash <= $maximalCashAllocation / 100)
+            .filter(res => res.strategy.allocations.realEstate <= $maximalRealEstateAllocation / 100);
+    })
 
 
 export const BestSimulationStore = derived(SimulationResultsStore, ($simulations) => {
