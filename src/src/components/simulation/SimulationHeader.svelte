@@ -1,6 +1,9 @@
 <script lang="ts">
 	import type { SimulationResult } from 'src/data/Simulation';
 
+	export let clazz: string = "";
+    export { clazz as class };
+
 	export let simulation: SimulationResult;
 
 	let chf = new Intl.NumberFormat('de-CH', {
@@ -15,7 +18,7 @@
 	$: totalFees = simulation.lastYear()?.totalFees ?? 0;
 </script>
 
-<div class="rounded-lg bg-white shadow relative overflow-hidden">
+<div class="rounded-lg bg-white shadow relative overflow-hidden {clazz}">
 	<div class="z-20 flex align-middle justify-start items-center px-5 py-6 w-fit">
 		<img src="/logos/viac.png" alt="" class="w-16 h-16 object-cover mr-2" />
 

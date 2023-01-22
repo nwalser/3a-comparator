@@ -20,7 +20,7 @@ export class SimulationParameters {
 }
 
 
-class Change {
+export class Change {
     name: string = "";
 
     forecastYear(parameters: SimulationParameters, prevYear: SimulationYear, thisYear: SimulationYear): SimulationYear {
