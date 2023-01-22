@@ -4,6 +4,7 @@
 		BondPerformance,
 		Change,
 		Interest,
+		RealEstatePerformance,
 		RelativeFee,
 		StockPerformance,
 		type SimulationResult
@@ -18,6 +19,9 @@
 	{/if}
 	{#if change instanceof BondPerformance}
 		<p>BondPerformance: {change.name} - {change.affectedEquityPercentage}</p>
+	{/if}
+	{#if change instanceof RealEstatePerformance}
+		<p>RealEstatePerformance: {change.name} - {change.affectedEquityPercentage}</p>
 	{/if}
 	{#if change instanceof Interest}
 		<p>Interest: {change.name} - {change.value}</p>

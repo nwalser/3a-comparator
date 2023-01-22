@@ -423,6 +423,8 @@
             {
                 "name": "Stock Performance",
                 "affectedEquityPercentage": 0.05,
+                "penalty": 0.01,
+                "description": "Penalty aufgrund von Nachhaltigem fond.",
                 "__type": "StockPerformance"
             },
             {
@@ -454,6 +456,8 @@
             {
                 "name": "Stock Performance",
                 "affectedEquityPercentage": 0.20,
+                "penalty": 0.01,
+                "description": "Penalty aufgrund von Nachhaltigem fond.",
                 "__type": "StockPerformance"
             },
             {
@@ -485,6 +489,8 @@
             {
                 "name": "Stock Performance",
                 "affectedEquityPercentage": 0.40,
+                "penalty": 0.01,
+                "description": "Penalty aufgrund von Nachhaltigem fond.",
                 "__type": "StockPerformance"
             },
             {
@@ -516,6 +522,8 @@
             {
                 "name": "Stock Performance",
                 "affectedEquityPercentage": 0.60,
+                "penalty": 0.01,
+                "description": "Penalty aufgrund von Nachhaltigem fond.",
                 "__type": "StockPerformance"
             },
             {
@@ -547,6 +555,8 @@
             {
                 "name": "Stock Performance",
                 "affectedEquityPercentage": 0.80,
+                "penalty": 0.01,
+                "description": "Penalty aufgrund von Nachhaltigem fond.",
                 "__type": "StockPerformance"
             },
             {
@@ -578,6 +588,8 @@
             {
                 "name": "Stock Performance",
                 "affectedEquityPercentage": 0.99,
+                "penalty": 0.01,
+                "description": "Penalty aufgrund von Nachhaltigem fond.",
                 "__type": "StockPerformance"
             },
             {
@@ -585,6 +597,232 @@
                 "affectedEquityPercentage": 0.01,
                 "value": 0.0005,
                 "__type": "Interest"
+            }
+        ]
+    },
+    {
+        "provider": "finpension",
+        "name": "Global Aktien 0",
+        "abbreviation": "fp",
+        "logo": "finpension.jpg",
+        "allocations": {
+            "stocks": 0.00,
+            "bonds": 0.99,
+            "cash": 0.01,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "Pauschale Gebühr",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "All inclusive Fee",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0047,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Bond Performance",
+                "affectedEquityPercentage": 0.99,
+                "__type": "BondPerformance"
+            }
+        ]
+    },
+    {
+        "provider": "finpension",
+        "name": "Global Aktien 20",
+        "abbreviation": "fp",
+        "logo": "finpension.jpg",
+        "allocations": {
+            "stocks": 0.20,
+            "bonds": 0.70,
+            "cash": 0.01,
+            "realEstate": 0.09
+        },
+        "changes": [
+            {
+                "name": "Pauschale Gebühr",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "TER",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0001,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Bond Performance",
+                "affectedEquityPercentage": 0.70,
+                "__type": "BondPerformance"
+            },
+            {
+                "name": "Real Estate Performance",
+                "affectedEquityPercentage": 0.09,
+                "__type": "RealEstatePerformance"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.20,
+                "__type": "StockPerformance"
+            }
+        ]
+    },
+    {
+        "provider": "finpension",
+        "name": "Global Aktien 40",
+        "abbreviation": "fp",
+        "logo": "finpension.jpg",
+        "allocations": {
+            "stocks": 0.40,
+            "bonds": 0.50,
+            "cash": 0.01,
+            "realEstate": 0.09
+        },
+        "changes": [
+            {
+                "name": "Pauschale Gebühr",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "TER",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0001,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Bond Performance",
+                "affectedEquityPercentage": 0.50,
+                "__type": "BondPerformance"
+            },
+            {
+                "name": "Real Estate Performance",
+                "affectedEquityPercentage": 0.09,
+                "__type": "RealEstatePerformance"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.40,
+                "__type": "StockPerformance"
+            }
+        ]
+    },
+    {
+        "provider": "finpension",
+        "name": "Global Aktien 60",
+        "abbreviation": "fp",
+        "logo": "finpension.jpg",
+        "allocations": {
+            "stocks": 0.60,
+            "bonds": 0.30,
+            "cash": 0.01,
+            "realEstate": 0.09
+        },
+        "changes": [
+            {
+                "name": "Pauschale Gebühr",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "TER",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0001,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Bond Performance",
+                "affectedEquityPercentage": 0.30,
+                "__type": "BondPerformance"
+            },
+            {
+                "name": "Real Estate Performance",
+                "affectedEquityPercentage": 0.09,
+                "__type": "RealEstatePerformance"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.60,
+                "__type": "StockPerformance"
+            }
+        ]
+    },
+    {
+        "provider": "finpension",
+        "name": "Global Aktien 80",
+        "abbreviation": "fp",
+        "logo": "finpension.jpg",
+        "allocations": {
+            "stocks": 0.80,
+            "bonds": 0.10,
+            "cash": 0.01,
+            "realEstate": 0.09
+        },
+        "changes": [
+            {
+                "name": "Pauschale Gebühr",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "TER",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0002,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Bond Performance",
+                "affectedEquityPercentage": 0.10,
+                "__type": "BondPerformance"
+            },
+            {
+                "name": "Real Estate Performance",
+                "affectedEquityPercentage": 0.09,
+                "__type": "RealEstatePerformance"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.80,
+                "__type": "StockPerformance"
+            }
+        ]
+    },
+    {
+        "provider": "finpension",
+        "name": "Global Aktien 100",
+        "abbreviation": "fp",
+        "logo": "finpension.jpg",
+        "allocations": {
+            "stocks": 0.99,
+            "bonds": 0.00,
+            "cash": 0.01,
+            "realEstate": 0.00
+        },
+        "changes": [
+            {
+                "name": "Pauschale Gebühr",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0039,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "TER",
+                "affectedEquityPercentage": 1.00,
+                "value": 0.0002,
+                "__type": "RelativeFee"
+            },
+            {
+                "name": "Stock Performance",
+                "affectedEquityPercentage": 0.99,
+                "__type": "StockPerformance"
             }
         ]
     }

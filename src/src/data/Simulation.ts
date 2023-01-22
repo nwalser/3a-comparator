@@ -32,10 +32,25 @@ export class Change {
 
 export class StockPerformance extends Change {
     affectedEquityPercentage: number = 0;
+    penalty: number = 0;
+    description: string = "";
 
     forecastYear(parameters: SimulationParameters, prevYear: SimulationYear, thisYear: SimulationYear) {
-        let change = prevYear.totalEquity * this.affectedEquityPercentage * parameters.averageStockPerformance;
+        let change = prevYear.totalEquity * this.affectedEquityPercentage * (parameters.averageStockPerformance - this.penalty);
         thisYear.stockPerformance += change;
+
+        return thisYear;
+    }
+}
+
+export class RealEstatePerformance extends Change {
+    affectedEquityPercentage: number = 0;
+    penalty: number = 0;
+    description: string = "";
+
+    forecastYear(parameters: SimulationParameters, prevYear: SimulationYear, thisYear: SimulationYear) {
+        let change = prevYear.totalEquity * this.affectedEquityPercentage * (parameters.averageRealEstatePerformance - this.penalty);
+        thisYear.realEstatePerformance += change;
 
         return thisYear;
     }
@@ -43,9 +58,11 @@ export class StockPerformance extends Change {
 
 export class BondPerformance extends Change {
     affectedEquityPercentage: number = 0;
+    penalty: number = 0;
+    description: string = "";
 
     forecastYear(parameters: SimulationParameters, prevYear: SimulationYear, thisYear: SimulationYear) {
-        let change = prevYear.totalEquity * this.affectedEquityPercentage * parameters.averageBondPerformance;
+        let change = prevYear.totalEquity * this.affectedEquityPercentage * (parameters.averageBondPerformance - this.penalty);
         thisYear.bondPerformance += change;
 
         return thisYear;
@@ -114,6 +131,7 @@ export class Strategy {
             subTypes: [
                 { value: StockPerformance, name: 'StockPerformance' },
                 { value: BondPerformance, name: 'BondPerformance' },
+                { value: RealEstatePerformance, name: 'RealEstatePerformance' },
                 { value: RelativeFee, name: 'RelativeFee' },
                 { value: AbsoluteFee, name: 'AbsoluteFee' },
                 { value: Interest, name: 'Interest' },
@@ -130,12 +148,14 @@ class SimulationYear {
     contributions: number = 0;
     stockPerformance: number = 0;
     bondPerformance: number = 0;
+    realEstatePerformance: number = 0;
     fees: number = 0;
     interest: number = 0;
 
     totalContributions: number = 0;
     totalStockPerformance: number = 0;
     totalBondPerformance: number = 0;
+    totalRealEstatePerformance: number = 0;
     totalFees: number = 0;
     totalInterest: number = 0;
 
@@ -206,12 +226,13 @@ export class Simulation {
 
         thisYear.totalBondPerformance = prevYear.totalBondPerformance + thisYear.bondPerformance;
         thisYear.totalStockPerformance = prevYear.totalStockPerformance + thisYear.stockPerformance;
+        thisYear.totalRealEstatePerformance = prevYear.totalRealEstatePerformance + thisYear.realEstatePerformance;
 
         thisYear.totalInterest = prevYear.totalInterest + thisYear.interest;
 
         thisYear.totalFees = prevYear.totalFees + thisYear.fees;
 
-        thisYear.totalEquity = prevYear.totalEquity + (thisYear.contributions + thisYear.bondPerformance + thisYear.stockPerformance + thisYear.interest + thisYear.fees);
+        thisYear.totalEquity = prevYear.totalEquity + (thisYear.contributions + thisYear.bondPerformance + thisYear.stockPerformance + thisYear.realEstatePerformance + thisYear.interest + thisYear.fees);
 
         return thisYear;
     }
