@@ -3,8 +3,14 @@
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
 	import type { SimulationResult } from 'src/data/Simulation';
+	import { AgeStore } from 'src/data/SimulationStore';
 
 	export let simulation: SimulationResult;
+
+	let chf = new Intl.NumberFormat('de-CH', {
+		style: 'currency',
+		currency: 'CHF'
+	});
 
 	let chart: any;
 	var data = {};
@@ -20,7 +26,22 @@
 			},
 			legend: {
 				display: false
-			}
+			},
+			tooltip: {
+                callbacks: {
+                    label: function(context: any) {
+                        let label = context.dataset.label || '';
+
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y !== null) {
+                            label += chf.format(context.parsed.y);
+                        }
+                        return label;
+                    }
+                }
+            }
 		},
 		scales: {
 			x: {
@@ -37,7 +58,7 @@
 
 	function updateChart() {
 		data = {
-			labels: simulation.calculatedYears.map((y) => y.year),
+			labels: simulation.calculatedYears.map((y) => y.year + $AgeStore),
 			datasets: [
 				{
 					label: 'Total Einzahlungen',

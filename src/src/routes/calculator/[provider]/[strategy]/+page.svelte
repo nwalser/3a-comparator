@@ -10,6 +10,7 @@
 	import Panel from 'src/components/Panel.svelte';
 	import SimulationDetailChart from 'src/components/simulation/SimulationDetailChart.svelte';
 	import AssetAllocationChart from 'src/components/simulation/AssetAllocationChart.svelte';
+	import SimulationHeader from 'src/components/simulation/SimulationHeader.svelte';
 
 	let simulation: SimulationResult;
 
@@ -32,6 +33,8 @@
 	</span>
 	<span slot="body">
 		<div class="grid grid-cols-2 gap-4">
+			<SimulationHeader {simulation} />
+
 			<Panel class="col-span-2">
 				<h1 class="text-2xl font-bold pb-3">Vermögensentwicklung</h1>
 				<SimulationDetailChart {simulation} class="h-96" />
@@ -43,7 +46,9 @@
 		</div>
 	</span>
 	<span slot="side">
-		<PersonalSituation />
-		<AveragePerformance />
+		<div class="grid grid-cols-1 gap-4">
+			<PersonalSituation />
+			<AveragePerformance />
+		</div>
 	</span>
 </TwoColumnLayout>

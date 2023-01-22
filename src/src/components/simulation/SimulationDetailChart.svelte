@@ -10,6 +10,11 @@
 
 	export let simulation: SimulationResult;
 
+	let chf = new Intl.NumberFormat('de-CH', {
+		style: 'currency',
+		currency: 'CHF'
+	});
+
 	let chart: any;
 	var data = {};
 	let options = {
@@ -25,7 +30,22 @@
 			legend: {
 				display: true,
 				position: "bottom"
-			}
+			},
+			tooltip: {
+                callbacks: {
+                    label: function(context: any) {
+                        let label = context.dataset.label || '';
+
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y !== null) {
+                            label += chf.format(context.parsed.y);
+                        }
+                        return label;
+                    }
+                }
+            }
 		},
 		scales: {
 			x: {

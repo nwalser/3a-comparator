@@ -3,6 +3,7 @@
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
 	import type { Allocations, SimulationResult } from 'src/data/Simulation';
+	import { stringify } from 'postcss';
 
 	export let allocations: Allocations;
 
@@ -24,7 +25,22 @@
 			legend: {
 				display: true,
 				position: 'bottom'
-			}
+			},
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        let label = context.dataset.label || '';
+
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed !== null) {
+                            label += context.parsed + "%";
+                        }
+                        return label;
+                    }
+                }
+            }
 		},
 		scales: {
 			x: {
