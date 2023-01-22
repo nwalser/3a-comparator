@@ -2,8 +2,7 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { Allocations, SimulationResult } from 'src/data/Simulation';
-	import { stringify } from 'postcss';
+	import type { Allocations } from 'src/data/Simulation';
 
 	export let allocations: Allocations;
 
@@ -26,21 +25,21 @@
 				display: true,
 				position: 'bottom'
 			},
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                        let label = context.dataset.label || '';
+			tooltip: {
+				callbacks: {
+					label: function (context: any) {
+						let label = context.dataset.label || '';
 
-                        if (label) {
-                            label += ': ';
-                        }
-                        if (context.parsed !== null) {
-                            label += context.parsed + "%";
-                        }
-                        return label;
-                    }
-                }
-            }
+						if (label) {
+							label += ': ';
+						}
+						if (context.parsed !== null) {
+							label += context.parsed + '%';
+						}
+						return label;
+					}
+				}
+			}
 		},
 		scales: {
 			x: {
