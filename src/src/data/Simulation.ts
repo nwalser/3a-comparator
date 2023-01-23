@@ -196,7 +196,7 @@ export class Simulation {
         firstYear.totalContributions = this.parameters.initialAssetValue;
         firstYear.contributions = this.parameters.initialAssetValue;
         firstYear.totalEquity = this.parameters.initialAssetValue;
-        
+
         this.calculatedYears.push(firstYear);
 
 

@@ -42,7 +42,7 @@
 				<ChangesList changes={simulation.strategy.changes} />
 			</Panel>
 			<Panel>
-				<h1 class="text-2xl font-bold pb-3">Vermögensverteilung</h1>
+				<h1 class="text-2xl font-bold pb-3">Anlageklassen</h1>
 				<AssetAllocationChart allocations={simulation.strategy.allocations} class="h-96" />
 			</Panel>
 			<Panel class="col-span-2">

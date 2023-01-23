@@ -800,6 +800,23 @@
         "name": "Global Aktien 100",
         "abbreviation": "fp",
         "logo": "finpension.jpg",
+        "alloc": [
+            {
+                "type": "Stock",
+                "allocation": 0.10
+            },
+            {
+                "allocation": 0.01,
+                "interest": 0.002
+            },
+            {
+                "Immobilien": 0.05
+            },
+            {
+                "Geld": 0.01
+            }
+        ],
+        "fees": {},
         "allocations": {
             "stocks": 0.99,
             "bonds": 0.00,
