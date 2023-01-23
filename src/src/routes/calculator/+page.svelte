@@ -3,10 +3,9 @@
 	import TwoColumnLayout from 'src/layouts/TwoColumnLayout.svelte';
 	import StrategyMedium from 'src/components/simulation/SimulationMedium.svelte';
 	import AveragePerformance from 'src/components/simulation/AveragePerformance.svelte';
-	import Filters from 'src/components/simulation/Filters.svelte';
 	import PersonalSituation from 'src/components/simulation/PersonalSituation.svelte';
-	import { BestSimulationStore, FilteredSimulationResultsStore } from 'src/data/SimulationStore';
 	import { flip } from 'svelte/animate';
+	import { SimulationStore } from 'src/model/PortfolioStore';
 </script>
 
 <TwoColumnLayout>
@@ -15,9 +14,9 @@
 	</span>
 	<span slot="body">
 		<div class="grid grid-cols-1 gap-4">
-			{#each $FilteredSimulationResultsStore as simulationResult (simulationResult.strategy.provider + simulationResult.strategy.name)}
+			{#each $SimulationStore as simulationResult (simulationResult.portfolio.provider + simulationResult.portfolio.name)}
 				<div animate:flip={{ delay: 0, duration: 500 }}>
-					<StrategyMedium simulation={simulationResult} bestSimulation={$BestSimulationStore} />
+					<StrategyMedium simulation={simulationResult} bestSimulation={simulationResult} />
 				</div>
 			{/each}
 		</div>
@@ -26,7 +25,6 @@
 		<div class="grid grid-cols-1 gap-4">
 			<PersonalSituation />
 			<AveragePerformance />
-			<Filters />
 		</div>
 	</span>
 </TwoColumnLayout>

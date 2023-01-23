@@ -1,4 +1,4 @@
-import type { Portfolio } from "src/data/Portfolio";
+import type { Portfolio } from "src/model/Portfolio";
 
 
 type Change = {
@@ -7,6 +7,7 @@ type Change = {
 }
 
 export type SimulationYear = {
+    year: number;
     fees: Change[];
     returns: Change[];
     transfers: Change[];
@@ -20,6 +21,14 @@ export class SimulationResult {
     constructor(portfolio: Portfolio, simulatedYears: SimulationYear[]) {
         this.portfolio = portfolio;
         this.simulatedYears = simulatedYears;
+    }
+
+    getTotalFees(): number {
+        return this.simulatedYears.map(y => y.fees).map(y => y.map(y => y.change).reduce((a, b) => a + b, 0)).reduce((a, b) => a + b, 0);
+    }
+
+    getTotalAssets(): number {
+        return this.simulatedYears[this.simulatedYears.length - 1].assetTotal
     }
 }
 
@@ -40,6 +49,7 @@ export function simulatePortfolio(portfolio: Portfolio, simulationParameters: Si
     let simulatedYears: SimulationYear[] = [];
 
     let firstYear: SimulationYear = {
+        year: 0,
         fees: [],
         returns: [],
         transfers: [{
@@ -82,6 +92,7 @@ export function simulatePortfolio(portfolio: Portfolio, simulationParameters: Si
 
 
         let year: SimulationYear = {
+            year: i,
             fees: fees,
             returns: returns,
             transfers: transfers,

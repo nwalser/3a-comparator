@@ -1,4 +1,5 @@
 import { AbsolutePortfolioFee, Asset, Portfolio, PortfolioFee, RelativePortfolioFee, SecurityAsset } from "./Portfolio";
+import { Provider, ProviderStore } from "./ProviderStore";
 
 enum Scale {
     Relative = "relative",
@@ -20,19 +21,24 @@ type AssetBlueprint = {
 }
 
 export class PortfolioBlueprint {
-    provider: string = "";
+    providerAbbreviation: string = "";
     name: string = "";
     portfolioFees: FeeBlueprint[] = [];
     assets: AssetBlueprint[] = [];
 }
 
 export class AssetGroupPerformance {
+    name: string = "";
     assetGroup: string = "";
     annualPerformance: number = 0;
+
+    setPercentage(percentage: number){
+        this.annualPerformance = percentage / 100;
+    }
 }
 
 
-export function generatePortfolio(blueprint: PortfolioBlueprint, assetGroupPerformances: AssetGroupPerformance[]) : Portfolio {
+export function generatePortfolio(blueprint: PortfolioBlueprint, provider: Provider, assetGroupPerformances: AssetGroupPerformance[]) : Portfolio {
     let fees: PortfolioFee[] = blueprint.portfolioFees.map(fee => {
         if (fee.scale == Scale.Absolute) {
             return new AbsolutePortfolioFee(fee.name, fee.value);
@@ -51,7 +57,7 @@ export function generatePortfolio(blueprint: PortfolioBlueprint, assetGroupPerfo
         return new SecurityAsset(asset.name, asset.allocation, asset.annualPerformance, asset.annualFees);
     });
 
-    let portfolio = new Portfolio(blueprint.provider, blueprint.name, fees, assets);
+    let portfolio = new Portfolio(provider, blueprint.name, fees, assets);
 
     return portfolio;
 }

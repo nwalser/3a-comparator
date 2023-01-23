@@ -1,18 +1,22 @@
 [
     {
+        "name": "Aktien ESG",
         "assetGroup": "Stocks ESG",
-        "annualPerformance": 0.006
+        "annualPerformance": 0.06
     },
     {
+        "name": "Aktien",
         "assetGroup": "Stocks",
-        "annualPerformance": 0.007
+        "annualPerformance": 0.07
     },
     {
+        "name": "Obligationen",
         "assetGroup": "Bonds",
-        "annualPerformance": 0.002
+        "annualPerformance": 0.02
     },
     {
+        "name": "Immobilien",
         "assetGroup": "Real Estate",
-        "annualPerformance": 0.003
+        "annualPerformance": 0.03
     }
 ]

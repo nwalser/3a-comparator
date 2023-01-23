@@ -1,3 +1,5 @@
+import type { Provider } from "./ProviderStore";
+
 export abstract class YearlyChange {
     abstract calculateYearlyReturns(totalAssets: number): number;
     abstract calculateYearlyFees(totalAssets: number): number;
@@ -75,12 +77,12 @@ export class RelativePortfolioFee extends PortfolioFee {
 }
 
 export class Portfolio {
-    provider: string;
+    provider: Provider;
     name: string;
     fees: PortfolioFee[];
     assets: Asset[];
 
-    constructor(provider: string, name: string, fees: PortfolioFee[] = [], assets: Asset[] = []) {
+    constructor(provider: Provider, name: string, fees: PortfolioFee[] = [], assets: Asset[] = []) {
         this.provider = provider;
         this.name = name;
         this.fees = fees;

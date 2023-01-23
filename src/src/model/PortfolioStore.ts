@@ -4,7 +4,9 @@ import { PortfolioBlueprint, AssetGroupPerformance, generatePortfolio } from "./
 
 import PortfolioBlueprints from 'src/data/PortfolioBlueprints.json';
 import AssetGroups from 'src/data/AssetGroups.json';
+
 import { simulatePortfolio, SimulationParameters } from "./Simulator";
+import { Provider, ProviderStore } from "./ProviderStore";
 
 export const AgeStore = writable(20);
 export const LiquidationAgeStore = writable(65);
@@ -16,8 +18,11 @@ export const PortfolioBlueprintStore = readable(plainToInstance(PortfolioBluepri
 
 export const AssetGroupPerformancesStore = writable(plainToInstance(AssetGroupPerformance, AssetGroups));
 
-export const PortfolioStore = derived([PortfolioBlueprintStore, AssetGroupPerformancesStore], ([$portfolioBlueprintStore, $assetGroupPerformancesStore]) => {
-    return $portfolioBlueprintStore.map(blueprint => generatePortfolio(blueprint, $assetGroupPerformancesStore));
+export const PortfolioStore = derived([PortfolioBlueprintStore, AssetGroupPerformancesStore, ProviderStore], ([$portfolioBlueprintStore, $assetGroupPerformancesStore, $providerStore]) => {
+    return $portfolioBlueprintStore.map(blueprint => {
+        let provider = $providerStore.find(provider => provider.abbreviation == blueprint.providerAbbreviation) ?? new Provider();
+        return generatePortfolio(blueprint, provider, $assetGroupPerformancesStore)
+    });
 });
 
 export const SimulationParametersStore = derived(

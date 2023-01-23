@@ -1,6 +1,6 @@
 [
     {
-        "provider": "Viac",
+        "providerAbbreviation": "viac",
         "name": "Global 100",
         "portfolioFees": [
             {
@@ -11,8 +11,8 @@
         ],
         "assets": [
             {
-                "name": "Stocks",
-                "assetGroup": "ESG Stocks",
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
                 "allocation": 0.80,
                 "annualFees": 0.0045,
                 "annualPerformance": 0.07

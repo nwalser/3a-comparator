@@ -2,8 +2,8 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { SimulationResult } from 'src/data/Simulation';
-	import { AgeStore } from 'src/data/SimulationStore';
+	import { AgeStore } from 'src/model/PortfolioStore';
+	import type { SimulationResult } from 'src/model/Simulator';
 
 	let clazz: string = '';
 	export { clazz as class };
@@ -29,23 +29,23 @@
 			},
 			legend: {
 				display: true,
-				position: "bottom"
+				position: 'bottom'
 			},
 			tooltip: {
-                callbacks: {
-                    label: function(context: any) {
-                        let label = context.dataset.label || '';
+				callbacks: {
+					label: function (context: any) {
+						let label = context.dataset.label || '';
 
-                        if (label) {
-                            label += ': ';
-                        }
-                        if (context.parsed.y !== null) {
-                            label += chf.format(context.parsed.y);
-                        }
-                        return label;
-                    }
-                }
-            }
+						if (label) {
+							label += ': ';
+						}
+						if (context.parsed.y !== null) {
+							label += chf.format(context.parsed.y);
+						}
+						return label;
+					}
+				}
+			}
 		},
 		scales: {
 			x: {
@@ -58,57 +58,47 @@
 		animation: false
 	};
 
+	function integrate(arr: number[]): number[] {
+		let runningTotal = 0;
+
+		return arr.map((n) => {
+			runningTotal += n;
+			return runningTotal;
+		});
+	}
+
 	function updateChart() {
 		data = {
-			labels: simulation.calculatedYears.map((y) => y.year + $AgeStore),
+			labels: simulation.simulatedYears.map((y) => y.year + $AgeStore),
 			datasets: [
 				{
 					label: 'Total Einzahlungen',
-					data: simulation.calculatedYears.map((y) => {
-						return y.totalContributions - y.contributions;
-					}),
+					data: integrate(
+						simulation.simulatedYears.map((year) =>
+							year.transfers.map((c) => c.change).reduce((a, b) => a + b, 0)
+						)
+					),
 					backgroundColor: colors.gray[400],
 					barPercentage: 1.3
 				},
 				{
-					label: 'Einzahlung',
-					data: simulation.calculatedYears.map((y) => y.contributions),
-					backgroundColor: colors.gray[500],
-					barPercentage: 1.3
-				},
-				{
 					label: 'Total Kursgewinne',
-					data: simulation.calculatedYears.map((y) => {
-						return (
-							y.totalBondPerformance +
-							y.totalInterest +
-							y.totalStockPerformance +
-							y.totalRealEstatePerformance
-						);
-					}),
+					data: integrate(
+						simulation.simulatedYears.map((year) =>
+							year.returns.map((c) => c.change).reduce((a, b) => a + b, 0)
+						)
+					),
 					backgroundColor: colors.green[400],
 					barPercentage: 1.3
 				},
 				{
-					label: 'Kursgewinne',
-					data: simulation.calculatedYears.map((y) => {
-						return y.bondPerformance + y.interest + y.stockPerformance + y.realEstatePerformance;
-					}),
-					backgroundColor: colors.green[500],
-					barPercentage: 1.3
-				},
-				{
 					label: 'Total Gebühren',
-					data: simulation.calculatedYears.map((y) => {
-						return y.totalFees - y.fees;
-					}),
+					data: integrate(
+						simulation.simulatedYears.map((year) =>
+							year.fees.map((c) => c.change).reduce((a, b) => a + b, 0)
+						)
+					),
 					backgroundColor: colors.red[400],
-					barPercentage: 1.3
-				},
-				{
-					label: 'Gebühren',
-					data: simulation.calculatedYears.map((y) => y.fees),
-					backgroundColor: colors.red[500],
 					barPercentage: 1.3
 				}
 			]
