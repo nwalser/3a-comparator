@@ -27,8 +27,17 @@
 				<div class="border-b border-gray-700">
 					<div class="flex h-16 items-center justify-between px-4 sm:px-0">
 						<div class="flex items-center">
+							<div class="flex-shrink-0">
+								<a href="/">
+									<img
+										class="h-8 w-8 object-cover rounded-full"
+										src="/logo.svg"
+										alt="logo"
+									/>
+								</a>
+							</div>
 							<div class="hidden md:block">
-								<div class="flex items-baseline space-x-4">
+								<div class="flex items-baseline space-x-4 ml-4">
 									<MenuItem href="/calculator">Rechner</MenuItem>
 								</div>
 							</div>

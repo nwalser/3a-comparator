@@ -1,23 +1,20 @@
 <script>
 	import Panel from 'src/components/Panel.svelte';
-	import {
-		AgeStore,
-		InitialAssetsStore,
-		LiquidationAgeStore,
-		YearlyContributionsStore
-	} from 'src/data/SimulationStore';
+	import { AgeStore, InitialAssetsStore, LiquidationAgeStore, YearlyContributionsStore } from 'src/model/PortfolioStore';
 </script>
 
 <Panel>
 	<h2 class="text-2xl font-bold mb-3">Persönliche Situation</h2>
 
 	<div>
-		<label for="price" class="block text-sm font-medium text-gray-700 mt-2">Dein Alter</label>
+		<label for="price" class="block text-sm font-medium text-gray-700 mt-2">Alter</label>
 		<div class="relative mt-1 rounded-md shadow-sm">
 			<input
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="0.00"
+				min="0"
+				max="100"
 				aria-describedby="price-currency"
 				bind:value={$AgeStore}
 			/>
@@ -28,13 +25,15 @@
 	</div>
 	<div>
 		<label for="price" class="block text-sm font-medium text-gray-700 mt-2"
-			>Dein Alter bei Liquidierung</label
+			>Alter bei Pensionierung</label
 		>
 		<div class="relative mt-1 rounded-md shadow-sm">
 			<input
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="0.00"
+				min="0"
+				max="100"
 				aria-describedby="price-currency"
 				bind:value={$LiquidationAgeStore}
 			/>
@@ -62,7 +61,7 @@
 	</div>
 	<div>
 		<label for="price" class="block text-sm font-medium text-gray-700 mt-2"
-			>Bereits vorhandenes Kapital</label
+			>Vorhandenes 3A Kapital</label
 		>
 		<div class="relative mt-1 rounded-md shadow-sm">
 			<input

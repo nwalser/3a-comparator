@@ -2,9 +2,9 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { Allocations } from 'src/data/Simulation';
+	import type { Asset } from 'src/model/Portfolio';
 
-	export let allocations: Allocations;
+	export let assets: Asset[];
 
 	let clazz: string = '';
 	export { clazz as class };
@@ -56,28 +56,18 @@
 
 	function updateChart() {
 		data = {
-			labels: ['Geld', 'Aktien', 'Obligationen', 'Immobilien'],
+			labels: assets.map(asset => asset.name),
 			datasets: [
 				{
-					data: [
-						allocations.cash * 100,
-						allocations.stocks * 100,
-						allocations.bonds * 100,
-						allocations.realEstate * 100
-					],
-					backgroundColor: [
-						colors.green[400],
-						colors.blue[400],
-						colors.orange[400],
-						colors.purple[400]
-					],
-					hoverOffset: 4
+					data: assets.map(asset => asset.allocation * 100),
+					hoverOffset: 4,
+					backgroundColor: colors.blue[400],
 				}
 			]
 		};
 	}
 
-	$: allocations, updateChart();
+	$: assets, updateChart();
 </script>
 
 <div class={clazz}>

@@ -2,8 +2,8 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { SimulationResult } from 'src/data/Simulation';
-	import { AgeStore } from 'src/data/SimulationStore';
+	import type { SimulationResult } from 'src/model/Simulator';
+	import { AgeStore } from 'src/model/PortfolioStore';
 
 	export let simulation: SimulationResult;
 
@@ -56,43 +56,37 @@
 		animation: false
 	};
 
+	function integrate(arr: number[]): number[] {
+		let runningTotal = 0;
+
+		return arr.map((n) => {
+			runningTotal += n;
+			return runningTotal;
+		});
+	}
+
 	function updateChart() {
 		data = {
-			labels: simulation.calculatedYears.map((y) => y.year + $AgeStore),
+			labels: simulation.simulatedYears.map((y) => y.year + $AgeStore),
 			datasets: [
 				{
 					label: 'Total Einzahlungen',
-					data: simulation.calculatedYears.map((y) => {
-						return y.totalContributions - y.contributions;
-					}),
+					data: integrate(
+						simulation.simulatedYears.map((year) =>
+							year.transfers.map((c) => c.change).reduce((a, b) => a + b, 0)
+						)
+					),
 					backgroundColor: colors.gray[400],
 					barPercentage: 1.3
 				},
 				{
-					label: 'Einzahlung',
-					data: simulation.calculatedYears.map((y) => y.contributions),
-					backgroundColor: colors.gray[500],
-					barPercentage: 1.3
-				},
-				{
 					label: 'Total Kursgewinne',
-					data: simulation.calculatedYears.map((y) => {
-						return (
-							y.totalBondPerformance +
-							y.totalInterest +
-							y.totalStockPerformance +
-							y.totalRealEstatePerformance
-						);
-					}),
+					data: integrate(
+						simulation.simulatedYears.map((year) =>
+							year.returns.map((c) => c.change).reduce((a, b) => a + b, 0)
+						)
+					),
 					backgroundColor: colors.green[400],
-					barPercentage: 1.3
-				},
-				{
-					label: 'Kursgewinne',
-					data: simulation.calculatedYears.map((y) => {
-						return y.bondPerformance + y.interest + y.stockPerformance + y.realEstatePerformance;
-					}),
-					backgroundColor: colors.green[500],
 					barPercentage: 1.3
 				}
 			]

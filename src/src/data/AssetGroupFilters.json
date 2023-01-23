@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Aktien Global",
+        "assetGroup": "Stocks Global",
+        "max": 1.0,
+        "min": 0
+    },
+    {
+        "name": "Aktien ESG",
+        "assetGroup": "Stocks ESG",
+        "max": 1.0,
+        "min": 0
+    },
+    {
+        "name": "Aktien Schweiz",
+        "assetGroup": "Stocks Switzerland",
+        "max": 1.0,
+        "min": 0
+    },
+    {
+        "name": "Obligationen",
+        "assetGroup": "Bonds",
+        "max": 1.0,
+        "min": 0
+    },
+    {
+        "name": "Immobilien",
+        "assetGroup": "Real Estate",
+        "max": 1.0,
+        "min": 0
+    }
+]
