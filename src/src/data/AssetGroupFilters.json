@@ -2,26 +2,31 @@
     {
         "name": "Aktien Global",
         "assetGroup": "Stocks Global",
-        "annualPerformance": 0.07
+        "max": 1.0,
+        "min": 0
     },
     {
         "name": "Aktien ESG",
         "assetGroup": "Stocks ESG",
-        "annualPerformance": 0.05
+        "max": 1.0,
+        "min": 0
     },
     {
         "name": "Aktien Schweiz",
         "assetGroup": "Stocks Switzerland",
-        "annualPerformance": 0.06
+        "max": 1.0,
+        "min": 0
     },
     {
         "name": "Obligationen",
         "assetGroup": "Bonds",
-        "annualPerformance": 0.03
+        "max": 1.0,
+        "min": 0
     },
     {
         "name": "Immobilien",
         "assetGroup": "Real Estate",
-        "annualPerformance": 0.04
+        "max": 1.0,
+        "min": 0
     }
 ]

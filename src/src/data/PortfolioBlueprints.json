@@ -1,21 +1,794 @@
 [
     {
         "providerAbbreviation": "viac",
-        "name": "Global 100",
+        "name": "3a Konto",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 1.00,
+                "annualPerformance": 0.002
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Konto Plus Global",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.95,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.05
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global 20",
         "portfolioFees": [
             {
-                "name": "All inclusive fee",
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0017
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.80,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.20
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global 40",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0028
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.60,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.40
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global 60",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0040
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.40,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.60
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global 80",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
                 "type": "relative",
                 "value": 0.0045
             }
         ],
         "assets": [
             {
+                "name": "Geld",
+                "allocation": 0.20,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.80
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global 100",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0045
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Konto Plus Schweiz",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.95,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.05
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 20",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0018
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.80,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.20
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 40",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0028
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.60,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.40
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 60",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.40,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.60
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 80",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0046
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.20,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.80
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 100",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0047
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Konto Plus Nachhaltig",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.95,
+                "annualPerformance": 0.002
+            },
+            {
                 "name": "Aktien ESG",
                 "assetGroup": "Stocks ESG",
+                "allocation": 0.05
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 20",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0018
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
                 "allocation": 0.80,
-                "annualFees": 0.0045,
-                "annualPerformance": 0.07
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
+                "allocation": 0.20
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 40",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0030
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.60,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
+                "allocation": 0.40
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 60",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0042
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.40,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
+                "allocation": 0.60
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 80",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0052
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.20,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
+                "allocation": 0.80
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 100",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0053
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Aktien 0",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Global Aktien 20",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.70,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.20,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Schweiz Aktien 20",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.70,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.20,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Global Aktien 40",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.50,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.40,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Schweiz Aktien 40",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.50,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.40,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Global Aktien 60",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.30,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.60,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Schweiz Aktien 60",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.30,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.60,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Global Aktien 80",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.10,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.80,
+                "annualFees": 0.0002
+            }
+        ]
+    },    {
+        "providerAbbreviation": "fp",
+        "name": "Schweiz Aktien 80",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.10,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.80,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Global Aktien 100",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.99,
+                "annualFees": 0.0002
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "fp",
+        "name": "Schweiz Aktien 100",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.99,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "providerAbbreviation": "tw",
+        "name": "Aktien 100",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.01,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.99,
+                "annualFees": 0.0001
             }
         ]
     }

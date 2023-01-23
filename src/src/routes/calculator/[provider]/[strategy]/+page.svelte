@@ -31,7 +31,6 @@
 	}
 </script>
 
-
 <TwoColumnLayout>
 	<span slot="header">
 		<Hero src="" alt="programmer working at desk in office" />
@@ -39,19 +38,15 @@
 	<span slot="body">
 		<div class="grid grid-cols-2 gap-4">
 			<SimulationHeader class="col-span-2" {simulation} />
+			<PortfolioFees fees={simulation.portfolio.fees} />
 
-			<Panel>
-				<h1 class="text-2xl font-bold pb-3">Gebühren</h1>
-				<PortfolioFees fees={simulation.portfolio.fees} />
-			</Panel>
 			<Panel class="row-span-2">
 				<h1 class="text-2xl font-bold pb-3">Anlageklassen</h1>
 				<AssetAllocationChart assets={simulation.portfolio.assets} class="h-96" />
 			</Panel>
-			<Panel>
-				<h1 class="text-2xl font-bold pb-3">Produktkosten</h1>
-				<ProductFees assets={simulation.portfolio.assets} />
-			</Panel>
+			
+			<ProductFees assets={simulation.portfolio.assets} />
+
 			<Panel class="col-span-2">
 				<h1 class="text-2xl font-bold pb-3">Vermögensentwicklung</h1>
 				<SimulationDetailChart {simulation} class="h-96" />

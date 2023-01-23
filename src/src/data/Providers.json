@@ -4,5 +4,17 @@
         "name": "Viac",
         "logo": "viac.png",
         "website": "https://www.viac.ch"
+    },
+    {
+        "abbreviation": "fp",
+        "name": "finpension",
+        "logo": "finpension.jpg",
+        "website": "https://www.finpension.ch"
+    },
+    {
+        "abbreviation": "tw",
+        "name": "TrueWealth",
+        "logo": "truewealth.jpeg",
+        "website": "https://www.truewealth.ch/"
     }
 ]

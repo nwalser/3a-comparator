@@ -13,6 +13,8 @@
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="0.00"
+				min="0"
+				max="100"
 				aria-describedby="price-currency"
 				bind:value={$AgeStore}
 			/>
@@ -30,6 +32,8 @@
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="0.00"
+				min="0"
+				max="100"
 				aria-describedby="price-currency"
 				bind:value={$LiquidationAgeStore}
 			/>
