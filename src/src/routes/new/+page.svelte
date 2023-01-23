@@ -1,12 +1,9 @@
 <script lang="ts">
+	import { AbsolutePortfolioFee, Portfolio, RelativePortfolioFee, SecurityAsset } from 'src/data/Portfolio';
 	import {
-		AbsolutePortfolioFee,
-		Portfolio,
-		RelativePortfolioFee,
-		SecurityAsset,
 		simulatePortfolio,
 		SimulationResult
-	} from './Sim';
+	} from '../../data/Simulator';
 
 	let portfolio = new Portfolio('Viac', 'Global 100');
 	portfolio.fees.push(new RelativePortfolioFee('TER', 0.0045));

@@ -6,12 +6,14 @@ import { plainToInstance } from 'class-transformer';
 
 export const AgeStore = writable(20);
 export const LiquidationAgeStore = writable(65);
+export const InitialAssetsStore = writable(0);
+export const YearlyContributionsStore = writable(7056);
+
 export const AverageBondPerformanceStore = writable(2.5);
 export const AverageRealEstatePerformanceStore = writable(4);
 
 export const AverageStockPerformanceStore = writable(6);
-export const InitialAssetsStore = writable(0);
-export const YearlyContributionsStore = writable(7056);
+
 
 export const MaximalStockAllocationStore = writable(100);
 export const MaximalBondAllocationStore = writable(100);

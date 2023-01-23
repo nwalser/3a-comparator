@@ -1,0 +1,22 @@
+[
+    {
+        "provider": "Viac",
+        "name": "Global 100",
+        "portfolioFees": [
+            {
+                "name": "All inclusive fee",
+                "type": "relative",
+                "value": 0.0045
+            }
+        ],
+        "assets": [
+            {
+                "name": "Stocks",
+                "assetGroup": "ESG Stocks",
+                "allocation": 0.80,
+                "annualFees": 0.0045,
+                "annualPerformance": 0.07
+            }
+        ]
+    }
+]

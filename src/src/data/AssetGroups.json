@@ -1,0 +1,18 @@
+[
+    {
+        "assetGroup": "Stocks ESG",
+        "annualPerformance": 0.006
+    },
+    {
+        "assetGroup": "Stocks",
+        "annualPerformance": 0.007
+    },
+    {
+        "assetGroup": "Bonds",
+        "annualPerformance": 0.002
+    },
+    {
+        "assetGroup": "Real Estate",
+        "annualPerformance": 0.003
+    }
+]
