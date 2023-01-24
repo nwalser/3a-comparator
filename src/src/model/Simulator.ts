@@ -18,6 +18,10 @@ export class SimulationResult {
     portfolio: Portfolio;
     simulatedYears: SimulationYear[];
 
+    getId() : string {
+        return this.portfolio.provider.abbreviation + "-" + this.portfolio.name;
+    }
+
     constructor(portfolio: Portfolio, simulatedYears: SimulationYear[]) {
         this.portfolio = portfolio;
         this.simulatedYears = simulatedYears;

@@ -686,7 +686,8 @@
                 "annualFees": 0.0002
             }
         ]
-    },    {
+    },
+    {
         "providerAbbreviation": "fp",
         "name": "Schweiz Aktien 80",
         "portfolioFees": [
@@ -775,7 +776,7 @@
     },
     {
         "providerAbbreviation": "tw",
-        "name": "Aktien 100",
+        "name": "Global Aktien 100",
         "portfolioFees": [],
         "assets": [
             {

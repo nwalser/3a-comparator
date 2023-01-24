@@ -15,12 +15,14 @@
 		>
 	</p>
 	<p class="text-sm pt-2">
-		Die ausgerechneten Werte sind immer im Bezug auf die vorgegebenen und durchschnittlichen
-		Renditen berechnet. Trotz der Verwendung von modernen Modellen können <span class="font-bold"
+		Die ausgerechneten Werte sind immer im Bezug auf die vorgegebenen Renditen berechnet. Trotz der
+		Verwendung von modernen Modellen können <span class="font-bold"
 			>die berechneten Werte von der Realität abweichen.</span
 		>
 	</p>
 	<p class="text-sm pt-2">
-		<a href="/blog/wie-funktionieren-die-berechnungen" class="text-blue-600 underline">Mehr über das Berechnungsmodell erfahren</a>
+		<a href="/blog/wie-funktionieren-die-berechnungen" class="text-blue-600 underline"
+			>Mehr über das Berechnungsmodell erfahren</a
+		>
 	</p>
 </Panel>

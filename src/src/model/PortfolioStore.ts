@@ -15,6 +15,9 @@ export const InitialAssetsStore = writable(0);
 export const YearlyContributionsStore = writable(7056);
 
 
+export const CurrentPageStore = writable(0);
+export const NumberOfEntriesPerPageStore = writable(10);
+
 export const PortfolioBlueprintStore = readable(plainToInstance(PortfolioBlueprint, PortfolioBlueprints));
 
 export const FilteredPortfolioBlueprintStore = derived([PortfolioBlueprintStore, AssetGroupFiltersStore], ([$portfolioBlueprintStore, $assetGroupFiltersStore]) => {
@@ -40,16 +43,23 @@ export const SimulationParametersStore = derived(
 
         return new SimulationParameters($initialAssets, $yearlyContributions, yearRuntime);
     }
-)
+);
 
 export const SimulationStore = derived([PortfolioStore, SimulationParametersStore], ([$portfolioStore, $simulationParametersStore]) => {
     return $portfolioStore.map(portfolio => { return simulatePortfolio(portfolio, $simulationParametersStore); });
-})
+});
 
 export const SortedSimulationStore = derived([SimulationStore], ([$simulationStore]) => {
     return $simulationStore.sort((a, b) => b.getTotalAssets() - a.getTotalAssets());
-})
+});
+
+export const PaginatedSimulationStore = derived([SortedSimulationStore, CurrentPageStore, NumberOfEntriesPerPageStore],
+    ([$sortedSimulationStore, $currentPageStore, $numberOfEntriesPerPageStore]) => {
+        return $sortedSimulationStore.slice($currentPageStore * $numberOfEntriesPerPageStore, ($currentPageStore + 1) * $numberOfEntriesPerPageStore)
+    }
+);
+
 
 export const BestSimulationStore = derived([SortedSimulationStore], ([$sortedSimulationStore]) => {
     return $sortedSimulationStore[0];
-})
+});

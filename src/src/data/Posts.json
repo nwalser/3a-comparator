@@ -1,12 +1,16 @@
 [
     {
-        "title": "How to deploy EventStoreDB with Docker Compose",
+        "title": "Wie funktioniert der 3A Rechner",
         "subtitle": "",
-        "published": "2023/01/04",
-        "updated": "2023/01/07",
-        "primaryColor": "bg-green-100",
-        "imageSrc": "/docker-compose-templates/eventstore/header.svg",
-        "imageAlt": "eventstore db logo",
-        "link": "/docker-compose-templates/eventstore"
+        "published": "2023/01/24",
+        "updated": "2023/01/24",
+        "link": "/blog/wie-funktioniert-der-3a-rechner"
+    },
+    {
+        "title": "Welche Gebühren können bei 3A Angeboten anfallen",
+        "subtitle": "",
+        "published": "2023/01/24",
+        "updated": "2023/01/24",
+        "link": "/blog/was-gibt-es-fuer-gebuehren"
     }
 ]

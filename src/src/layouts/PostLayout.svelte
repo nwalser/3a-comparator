@@ -8,6 +8,11 @@
 	import { PostSearchStore, PostsFilteredStore } from 'src/model/Posts';
 	import PostList from 'src/components/post-list/PostList.svelte';
 
+	export let data;
+	export let form;
+	export let id;
+	export let layout;
+
 	export let title = '';
 	export let description = '';
 
@@ -24,18 +29,11 @@
 <MetaTags {title} titleTemplate="%s - Nathaniel Walser" {description}  />
 
 <TwoColumnLayout>
-	<span slot="header">
-		<img
-			src="/hero/bits.svg"
-			alt="programmer working at desk in office"
-			class="absolute bottom-0 -right-32 md:right-0 lg:right-6 h-[30rem] max-w-none opacity-20 -z-50"
-		/>
-	</span>
 	<span slot="body">
 		<Panel>
 			<Prose>
 				<p class="text-sm mb-1">
-					Veröffentlich {published} - Aktualisiert {updated} - Author <a href={authorLink}>{author}</a>
+					Veröffentlich am {published} - Aktualisiert am {updated} - Author <a href={authorLink}>{author}</a>
 				</p>
 				<slot />
 			</Prose>
@@ -43,22 +41,20 @@
 	</span>
 	<span slot="side">
         <div class="grid gap-4">
-            <Panel class="!px-0 !py-0">
-                <Prose>
-                    <h2 class="mx-5 py-6">Artikel Suchen</h2>
-                </Prose>
-                <div class="w-full h-[1px] bg-gray-300" />
-                <div>
-                    <label for="email" class="sr-only">Suche</label>
-                    <input
-                        type="search"
-                        name="search"
-                        id="search"
-                        class="block w-full rounded-md text-2xl text-gray-800 border-gray-500 shadow-sm px-5 py-6"
-                        placeholder="Suche"
-                        bind:value={$PostSearchStore}
-                    />
-                </div>
+            <Panel>
+				<h2 class="text-2xl font-bold mb-3">Artikel Suchen</h2>
+
+				<div>
+					<div class="relative mt-1 rounded-md shadow-sm">
+						<input
+							type="text"
+							class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+							placeholder="Suche"
+							aria-describedby="price-currency"
+							bind:value={$PostSearchStore}
+						/>
+					</div>
+				</div>
             </Panel>
     
             <PostList

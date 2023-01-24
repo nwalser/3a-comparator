@@ -38,7 +38,7 @@
 							</div>
 							<div class="hidden md:block">
 								<div class="flex items-baseline space-x-4 ml-4">
-									<MenuItem href="/rechner">Rechner</MenuItem>
+									<MenuItem href="/blog/wie-funktioniert-der-3a-rechner">Wie funktioniert der 3A-Rechner</MenuItem>
 								</div>
 							</div>
 						</div>
@@ -47,7 +47,7 @@
 								<a
 									href="/rechner"
 									class="ml-6 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-									>Zum Rechner</a
+									>Zum 3A-Rechner</a
 								>
 							</div>
 						</div>
