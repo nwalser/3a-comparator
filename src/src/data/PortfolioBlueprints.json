@@ -778,6 +778,7 @@
         "providerAbbreviation": "tw",
         "name": "Global Aktien 100",
         "portfolioFees": [],
+        "variable": true,
         "assets": [
             {
                 "name": "Geld",

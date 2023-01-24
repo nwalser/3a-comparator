@@ -25,6 +25,7 @@ export class PortfolioBlueprint {
     name: string = "";
     portfolioFees: FeeBlueprint[] = [];
     assets: AssetBlueprint[] = [];
+    variable: boolean = false
 }
 
 export class AssetGroupPerformance {
