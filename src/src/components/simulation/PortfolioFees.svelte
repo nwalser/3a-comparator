@@ -106,7 +106,7 @@
 					scope="row"
 					colspan="2"
 					class="hidden pl-6 pr-3 pt-4 text-right text-sm font-semibold text-gray-900 sm:table-cell md:pl-0"
-					>Gesammtkosten Jährlich:</th
+					>Gesamtkosten jährlich (TER):</th
 				>
 				<td class="pl-3 pr-4 pt-4 text-right text-sm font-semibold text-gray-900 sm:pr-6 md:pr-0">
 					{#if portfolio.getRelativeYearlyCosts() > 0}
