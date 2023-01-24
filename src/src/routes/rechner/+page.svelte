@@ -11,11 +11,19 @@
 	import AssetGroupFilters from 'src/components/simulation/AssetGroupFilters.svelte';
 	import Pager from 'src/components/simulation/Pager.svelte';
 	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import PagerHeader from 'src/components/simulation/PagerHeader.svelte';
 </script>
+
+<MetaTags
+	title={'Rechner'}
+	titleTemplate="%s - 3A Rechner"
+/>
 
 <TwoColumnLayout>
 	<span slot="body">
-		<div class="grid grid-cols-1 gap-4">
+		<div class="grid grid-cols-1 gap-2">
+			<PagerHeader />
 			{#each $PaginatedSimulationStore as simulationResult (simulationResult.getId())}
 				<div animate:flip={{ delay: 0, duration: 500 }}>
 					<StrategyMedium simulation={simulationResult} bestSimulation={$BestSimulationStore} />
@@ -27,8 +35,8 @@
 	<span slot="side">
 		<div class="grid grid-cols-1 gap-4">
 			<PersonalSituation />
-			<AveragePerformance />
 			<AssetGroupFilters />
+			<AveragePerformance />
 			<Disclaimer />
 		</div>
 	</span>

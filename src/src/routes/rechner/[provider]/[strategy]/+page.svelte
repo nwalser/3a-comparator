@@ -14,10 +14,11 @@
 	import PortfolioFees from 'src/components/simulation/PortfolioFees.svelte';
 	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
 	import { CurrencyStore } from 'src/model/Currency';
+	import { MetaTags } from 'svelte-meta-tags';
 
 	let simulation: SimulationResult;
 
-	let yearlyCostsText: string = "";
+	let yearlyCostsText: string = '';
 
 	$: {
 		simulation = $SimulationStore.find(
@@ -31,11 +32,16 @@
 		}
 
 		yearlyCostsText += (simulation.portfolio.getRelativeYearlyCosts() * 100).toFixed(2);
-		yearlyCostsText += "%";
-		yearlyCostsText += " + ";
+		yearlyCostsText += '%';
+		yearlyCostsText += ' + ';
 		yearlyCostsText += $CurrencyStore.format(simulation.portfolio.getAbsoluteYearlyCosts());
 	}
 </script>
+
+<MetaTags
+	title={simulation.portfolio.provider.name + ' ' + simulation.portfolio.name}
+	titleTemplate="%s - 3A Rechner"
+/>
 
 <TwoColumnLayout>
 	<span slot="header">
@@ -47,11 +53,14 @@
 
 			<Panel class="col-span-3">
 				<h1 class="text-2xl font-bold pb-3">
-					Gesammtkosten ({yearlyCostsText})
+					Gesamtkosten ({yearlyCostsText})
 				</h1>
 				<p class="text-sm">
-					Alle Werte sind immer auf ein Jahr bezugen. Die Gesammtkosten Jährlich sind Prozentual auf den
-					Portfolio Wert bezogen. <a href="/blog/was-gibt-es-fuer-gebuehren" class="text-blue-600 underline">Mehr über Gebühren erfahren</a>
+					Alle Werte sind immer auf ein Jahr bezogen. Die Gesamtkosten jährlich sind prozentual auf
+					den Portfoliowert bezogen.
+					<a href="/blog/was-gibt-es-fuer-gebuehren" class="text-blue-600 underline"
+						>Mehr über Gebühren erfahren</a
+					>
 				</p>
 				<PortfolioFees portfolio={simulation.portfolio} />
 			</Panel>
