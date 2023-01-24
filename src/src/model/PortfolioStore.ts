@@ -16,15 +16,16 @@ export const YearlyContributionsStore = writable(7056);
 
 
 export const CurrentPageStore = writable(0);
-export const NumberOfEntriesPerPageStore = writable(10);
+export const NumberOfEntriesPerPageStore = writable(8);
 
 export const PortfolioBlueprintStore = readable(plainToInstance(PortfolioBlueprint, PortfolioBlueprints));
 
 export const FilteredPortfolioBlueprintStore = derived([PortfolioBlueprintStore, AssetGroupFiltersStore], ([$portfolioBlueprintStore, $assetGroupFiltersStore]) => {
-    return $portfolioBlueprintStore.filter(p => p.assets.every(a => {
-        let assetGroup = $assetGroupFiltersStore.find(asset => a.assetGroup == asset.assetGroup) ?? new AssetGroupFilter();
-        return a.allocation >= assetGroup?.min && a.allocation <= assetGroup?.max;
-    }));
+    return $portfolioBlueprintStore.filter(p => $assetGroupFiltersStore.every(a => {
+        let allocation = p.assets.find(asset => a.assetGroup == asset.assetGroup)?.allocation ?? 0;
+
+        return allocation >= a.min && allocation <= a.max;
+    }))
 });
 
 export const AssetGroupPerformancesStore = writable(plainToInstance(AssetGroupPerformance, AssetGroups));

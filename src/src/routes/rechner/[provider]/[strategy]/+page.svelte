@@ -14,6 +14,7 @@
 	import PortfolioFees from 'src/components/simulation/PortfolioFees.svelte';
 	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
 	import { CurrencyStore } from 'src/model/Currency';
+	import { MetaTags } from 'svelte-meta-tags';
 
 	let simulation: SimulationResult;
 
@@ -36,6 +37,11 @@
 		yearlyCostsText += $CurrencyStore.format(simulation.portfolio.getAbsoluteYearlyCosts());
 	}
 </script>
+
+<MetaTags
+	title={simulation.portfolio.provider.name + " " + simulation.portfolio.name}
+	titleTemplate="%s - 3A Rechner"
+/>
 
 <TwoColumnLayout>
 	<span slot="header">

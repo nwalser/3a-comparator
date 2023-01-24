@@ -9,7 +9,7 @@
 
 <a href="/rechner/{simulation.portfolio.provider.abbreviation}/{simulation.portfolio.name}">
 	<div class="rounded-lg bg-white shadow relative overflow-hidden">
-		<div class="z-20 flex align-middle justify-start items-center px-5 py-6 w-full">
+		<div class="z-20 flex align-middle justify-start items-center px-5 py-4 w-full">
 			<div class="flex align-middle justify-start items-center flex-grow">
 				<img
 					src="/logos/{simulation.portfolio.provider.logo}"

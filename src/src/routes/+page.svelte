@@ -8,9 +8,9 @@
 </script>
 
 <MetaTags
-	title={'Säule 3A: Aktuelle Angebote Vergleichen'}
+	title={'Säule 3A Angebote jetzt vergleichen'}
 	titleTemplate="%s - 3A Rechner"
-	description={'test'}
+	description={'Vergleiche die Kosten und Renditen diverser 3A Angebote von Banken und Vorsorgestiftungen.'}
 />
 
 <TwoColumnLayout pb={110}>
@@ -27,18 +27,20 @@
 				<Prose>
 					<h1>Säule 3A: Aktuelle Angebote Vergleichen</h1>
 					<p>
-						Vergleiche die Kosten und Renditen diverser 3A Angebote von Banken. Privatsphäre ist
-						wichtig, daher wir keine deiner Angaben übermittelt oder ausgewertet.
+						Vergleiche die Kosten und Renditen diverser 3A Angebote von Banken und
+						Vorsorgestiftungen. Privatsphäre ist wichtig, daher wird keine deiner Angaben
+						übermittelt oder ausgewertet.
 					</p>
 					<p>
-						Nachdem du deine Angaben eingegeben hast, sind die Resultate sofort verfügbar.
+						Nachdem du unten deine persönliche Situation erfasst hast, sind die Resultate sofort
+						verfügbar.
 					</p>
 					<p>
 						Aktuell werden Produkte von <span class="font-bold"
 							>Finpension, Viac und TrueWealth verglichen.</span
 						>
 					</p>
-					<p>Produkte mit einer Versicherungskomponente werden nicht Verglichen.</p>
+					<p>3A Produkte mit einer Versicherungskomponente werden nicht verglichen.</p>
 				</Prose>
 			</Panel>
 
