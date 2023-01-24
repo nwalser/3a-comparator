@@ -3,17 +3,11 @@
 	import {
 		AbsolutePortfolioFee,
 		Portfolio,
-		PortfolioFee,
 		RelativePortfolioFee,
-		SecurityAsset
 	} from 'src/model/Portfolio';
 
 	export let portfolio: Portfolio;
 </script>
-
-{#if portfolio.fees.length == 0}
-	<p>Dieser Anbieter verrechnet keine Verwaltungsgebühren</p>
-{/if}
 
 <div class="-mx-4 flex flex-col sm:-mx-6 md:mx-0">
 	<table class="min-w-full divide-y divide-gray-300">
@@ -22,16 +16,27 @@
 				<th
 					scope="col"
 					class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 md:pl-0"
-					>Gebühr</th
+					>Portfolio Gebühren</th
 				>
 				<th
 					scope="col"
 					class="hidden py-3.5 px-3 text-right text-sm font-semibold text-gray-900 sm:table-cell"
-					>Kosten</th
+					>Total</th
 				>
 			</tr>
 		</thead>
 		<tbody>
+			{#if portfolio.fees.length == 0}
+				<tr class="border-b border-gray-200">
+					<td class="py-2 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
+						<div class="font-medium text-gray-900">Dieser Anbieter erhebt keine Portfoliogebühren</div>
+					</td>
+					<td class="py-2 pl-3 pr-4 text-right text-sm text-gray-500 sm:pr-6 md:pr-0"
+						>0.00%</td
+					>
+				</tr>
+			{/if}
+
 			{#each portfolio.fees as fee}
 				{#if fee instanceof RelativePortfolioFee}
 					<tr class="border-b border-gray-200">
@@ -66,7 +71,7 @@
 				<th
 					scope="col"
 					class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 md:pl-0"
-					>Anlageklasse</th
+					>Produktkosten</th
 				>
 
 				<th
@@ -76,7 +81,7 @@
 				<th
 					scope="col"
 					class="hidden py-3.5 px-3 text-right text-sm font-semibold text-gray-900 sm:table-cell"
-					>Kosten</th
+					></th
 				>
 			</tr>
 		</thead>
@@ -105,7 +110,7 @@
 				>
 				<td class="pl-3 pr-4 pt-4 text-right text-sm font-semibold text-gray-900 sm:pr-6 md:pr-0">
 					{#if portfolio.getRelativeYearlyCosts() > 0}
-						{(portfolio.getRelativeYearlyCosts()*100).toFixed(2)}%
+						{(portfolio.getRelativeYearlyCosts() * 100).toFixed(2)}%
 					{/if}
 
 					{#if portfolio.getAbsoluteYearlyCosts() > 0}

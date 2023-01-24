@@ -34,7 +34,7 @@
 
 		yearlyCostsText += (simulation.portfolio.getRelativeYearlyCosts() * 100).toFixed(2);
 		yearlyCostsText += "%";
-		yearlyCostsText += " - ";
+		yearlyCostsText += " + ";
 		yearlyCostsText += $CurrencyStore.format(simulation.portfolio.getAbsoluteYearlyCosts());
 	}
 </script>
@@ -49,11 +49,11 @@
 
 			<Panel class="col-span-3">
 				<h1 class="text-2xl font-bold pb-3">
-					Gebühren ({yearlyCostsText})
+					Gesammtkosten ({yearlyCostsText})
 				</h1>
 				<p class="text-sm">
-					Alle Gebühren sind immer auf ein Jahr bezogen. Die Gesammtkosten Jährlich sind auf den
-					Portfolio Wert bezogen.
+					Alle Werte sind immer auf ein Jahr bezugen. Die Gesammtkosten Jährlich sind Prozentual auf den
+					Portfolio Wert bezogen. <a href="/blog/was-gibt-es-fuer-gebuehren" class="text-blue-600 underline">Mehr über Gebühren erfahren</a>
 				</p>
 				<PortfolioFees portfolio={simulation.portfolio} />
 			</Panel>
@@ -66,11 +66,6 @@
 			<Panel class="col-span-3">
 				<h1 class="text-2xl font-bold pb-3">Errechnete Vermögensentwicklung</h1>
 				<SimulationDetailChart {simulation} class="h-96" />
-			</Panel>
-
-			<Panel class="col-span-3">
-				<h1 class="text-2xl font-bold pb-3">Altersrente nach Trinity Studie</h1>
-				<p>TODO</p>
 			</Panel>
 		</div>
 	</span>

@@ -20,4 +20,7 @@
 			>die berechneten Werte von der Realität abweichen.</span
 		>
 	</p>
+	<p class="text-sm pt-2">
+		<a href="/blog/wie-funktionieren-die-berechnungen" class="text-blue-600 underline">Mehr über das Berechnungsmodell erfahren</a>
+	</p>
 </Panel>

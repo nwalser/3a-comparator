@@ -21,6 +21,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"mdsvex": "^0.10.6",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
@@ -40,6 +41,7 @@
 		"class-transformer": "^0.5.1",
 		"reflect-metadata": "^0.1.13",
 		"svelte-chartjs": "^3.1.2",
+		"svelte-meta-tags": "^2.6.5",
 		"tailwind-scrollbar": "^2.1.0"
 	}
 }

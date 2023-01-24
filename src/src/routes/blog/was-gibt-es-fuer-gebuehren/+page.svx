@@ -1,0 +1,14 @@
+---
+id: 1
+layout: post
+title: "How to deploy EventStoreDB with Docker Compose"
+description: "Learn how to deploy EventStoreDB with Docker Compose."
+author: Nathaniel Walser
+published: "2023/01/04"
+updated: "2023/01/07"
+---
+
+# {title}
+EventStoreDB is a database that is designed to store data as a series of events. It supports features like 
+**persistent subscriptions**, **catch up subscriptions** and **projections**, just to name a few. It can be used to 
+implement patterns like **event sourcing**.

@@ -1,0 +1,12 @@
+[
+    {
+        "title": "How to deploy EventStoreDB with Docker Compose",
+        "subtitle": "",
+        "published": "2023/01/04",
+        "updated": "2023/01/07",
+        "primaryColor": "bg-green-100",
+        "imageSrc": "/docker-compose-templates/eventstore/header.svg",
+        "imageAlt": "eventstore db logo",
+        "link": "/docker-compose-templates/eventstore"
+    }
+]
