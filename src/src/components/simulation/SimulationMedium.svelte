@@ -14,7 +14,7 @@
 				<img
 					src="/logos/{simulation.portfolio.provider.logo}"
 					alt=""
-					class="w-16 h-16 object-cover mr-4"
+					class="w-12 h-12 object-cover mr-4 rounded-full"
 				/>
 
 				<div>
@@ -42,6 +42,9 @@
 				</div>
 			</div>
 			<AssetAllocationPreviewChart class="h-20 w-20" assets={simulation.portfolio.assets} />
+		</div>
+		<div class="absolute bottom-0 right-0 py-1 px-2 text-xs bg-green-300 rounded-tl-md">
+			TER <span class="font-bold">{(simulation.portfolio.getRelativeYearlyCosts()*100).toFixed(2)}%</span>
 		</div>
 	</div>
 </a>

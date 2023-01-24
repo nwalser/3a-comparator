@@ -8,7 +8,7 @@
 	import Panel from '../Panel.svelte';
 </script>
 
-<Panel class="pt-4 !pb-0 mb-2">
+<Panel class="pt-4 !pb-0">
 	<div class="-mb-px flex w-full flex-1">
 		<p
 			class="inline-flex flex-grow items-center transparent pb-4 pr-1 text-base font-medium text-gray-700"

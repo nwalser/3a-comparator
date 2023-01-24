@@ -24,7 +24,6 @@
 	<span slot="body">
 		<div class="grid grid-cols-1 gap-2">
 			<PagerHeader />
-			<Pager />
 			{#each $PaginatedSimulationStore as simulationResult (simulationResult.getId())}
 				<div animate:flip={{ delay: 0, duration: 500 }}>
 					<StrategyMedium simulation={simulationResult} bestSimulation={$BestSimulationStore} />
