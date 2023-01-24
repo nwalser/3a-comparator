@@ -1,11 +1,7 @@
 <script lang="ts">
+	import { CurrencyStore } from 'src/model/Currency';
 	import { AbsolutePortfolioFee, PortfolioFee, RelativePortfolioFee } from 'src/model/Portfolio';
 	import Panel from '../Panel.svelte';
-
-	let chf = new Intl.NumberFormat('de-CH', {
-		style: 'currency',
-		currency: 'CHF'
-	});
 
 	export let fees: PortfolioFee[];
 </script>
@@ -34,7 +30,7 @@
 					{fee.name}:
 				</p>
 				<p>
-					<span class="font-bold">{chf.format(fee.absoluteFee)}</span>
+					<span class="font-bold">{$CurrencyStore.format(fee.absoluteFee)}</span>
 				</p>
 			</div>
 		{/if}

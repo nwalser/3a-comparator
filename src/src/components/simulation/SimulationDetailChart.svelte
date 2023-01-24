@@ -4,16 +4,13 @@
 	import 'chart.js/auto';
 	import { AgeStore } from 'src/model/PortfolioStore';
 	import type { SimulationResult } from 'src/model/Simulator';
+	import { CurrencyStore } from 'src/model/Currency';
 
 	let clazz: string = '';
 	export { clazz as class };
 
 	export let simulation: SimulationResult;
 
-	let chf = new Intl.NumberFormat('de-CH', {
-		style: 'currency',
-		currency: 'CHF'
-	});
 
 	let chart: any;
 	var data = {};
@@ -40,7 +37,7 @@
 							label += ': ';
 						}
 						if (context.parsed.y !== null) {
-							label += chf.format(context.parsed.y);
+							label += $CurrencyStore.format(context.parsed.y);
 						}
 						return label;
 					}

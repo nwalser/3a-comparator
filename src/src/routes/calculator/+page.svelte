@@ -9,6 +9,7 @@
 	import AssetGroupFilters from 'src/components/simulation/AssetGroupFilters.svelte';
 	import Panel from 'src/components/Panel.svelte';
 	import Prose from 'src/components/Prose.svelte';
+	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
 </script>
 
 <TwoColumnLayout>
@@ -26,6 +27,7 @@
 	</span>
 	<span slot="side">
 		<div class="grid grid-cols-1 gap-4">
+			<Disclaimer />
 			<PersonalSituation />
 			<AveragePerformance />
 			<AssetGroupFilters />

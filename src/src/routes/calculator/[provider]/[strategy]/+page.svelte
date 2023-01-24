@@ -13,6 +13,7 @@
 	import SimulationDetailChart from 'src/components/simulation/SimulationDetailChart.svelte';
 	import PortfolioFees from 'src/components/simulation/PortfolioFees.svelte';
 	import ProductFees from 'src/components/simulation/ProductFees.svelte';
+	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
 
 	let simulation: SimulationResult;
 
@@ -60,6 +61,7 @@
 	</span>
 	<span slot="side">
 		<div class="grid grid-cols-1 gap-4">
+			<Disclaimer />
 			<PersonalSituation />
 			<AveragePerformance />
 		</div>

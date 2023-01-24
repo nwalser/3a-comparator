@@ -31,6 +31,7 @@ export class AssetGroupPerformance {
     name: string = "";
     assetGroup: string = "";
     annualPerformance: number = 0;
+    defaultAnnualPerformance: number = 0;
 
     setPercentage(percentage: number){
         this.annualPerformance = percentage / 100;
