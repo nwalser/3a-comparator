@@ -26,8 +26,6 @@
 				sim.portfolio.name === $page.params.strategy
 		)!;
 
-		console.log($page.params.provider);
-
 		if (simulation === undefined) {
 			throw error(404);
 		}
