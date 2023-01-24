@@ -2,7 +2,6 @@
 	import { CurrencyStore } from 'src/model/Currency';
 	import type { SimulationResult } from 'src/model/Simulator';
 	import AssetAllocationPreviewChart from './AssetAllocationPreviewChart.svelte';
-	import SimulationChart from './SimulationChart.svelte';
 
 	export let simulation: SimulationResult;
 	export let bestSimulation: SimulationResult;

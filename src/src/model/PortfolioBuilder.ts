@@ -1,5 +1,5 @@
-import { AbsolutePortfolioFee, Asset, Portfolio, PortfolioFee, RelativePortfolioFee, SecurityAsset } from "./Portfolio";
-import { Provider, ProviderStore } from "./ProviderStore";
+import { AbsolutePortfolioFee, Portfolio, PortfolioFee, RelativePortfolioFee, SecurityAsset } from "./Portfolio";
+import type { Provider } from "./ProviderStore";
 
 enum Scale {
     Relative = "relative",
@@ -48,14 +48,14 @@ export function generatePortfolio(blueprint: PortfolioBlueprint, provider: Provi
         }
     });
 
-    let assets: Asset[] = blueprint.assets.map(asset => {
+    let assets: SecurityAsset[] = blueprint.assets.map(asset => {
         let performance = assetGroupPerformances.find(perf => perf.assetGroup == asset.assetGroup);
 
         if (performance !== undefined) {
             asset.annualPerformance = performance.annualPerformance
         }
 
-        return new SecurityAsset(asset.name, asset.allocation, asset.annualPerformance, asset.annualFees);
+        return new SecurityAsset(asset.name, asset.allocation, asset.annualPerformance, asset.annualFees, asset.assetGroup);
     });
 
     let portfolio = new Portfolio(provider, blueprint.name, fees, assets);

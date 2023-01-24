@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Chart } from 'svelte-chartjs';
-	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
 	import { AgeStore } from 'src/model/PortfolioStore';
 	import type { SimulationResult } from 'src/model/Simulator';
@@ -75,7 +74,7 @@
 							year.transfers.map((c) => c.change).reduce((a, b) => a + b, 0)
 						)
 					),
-					backgroundColor: colors.gray[400],
+					backgroundColor: "#5eccff",
 					barPercentage: 1.3
 				},
 				{
@@ -85,7 +84,7 @@
 							year.returns.map((c) => c.change).reduce((a, b) => a + b, 0)
 						)
 					),
-					backgroundColor: colors.green[400],
+					backgroundColor: "#66ff5e",
 					barPercentage: 1.3
 				},
 				{
@@ -95,7 +94,7 @@
 							year.fees.map((c) => c.change).reduce((a, b) => a + b, 0)
 						)
 					),
-					backgroundColor: colors.red[400],
+					backgroundColor: "#ff6c5e",
 					barPercentage: 1.3
 				}
 			]

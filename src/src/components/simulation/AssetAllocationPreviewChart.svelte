@@ -2,9 +2,10 @@
 	import { Chart } from 'svelte-chartjs';
 	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
-	import type { Asset } from 'src/model/Portfolio';
+	import type { SecurityAsset } from 'src/model/Portfolio';
+	import { AssetGroupColorsStore } from 'src/model/AssetGroupColors';
 
-	export let assets: Asset[];
+	export let assets: SecurityAsset[];
 
 	let clazz: string = '';
 	export { clazz as class };
@@ -60,9 +61,9 @@
 				{
 					data: assets.map(asset => asset.allocation * 100),
 					hoverOffset: 4,
-					backgroundColor: colors.blue[400],
+					backgroundColor: assets.map(asset => $AssetGroupColorsStore.find(a => a.assetGroup == asset.assetGroup)?.color ?? "#ff5e6c"),
 				}
-			]
+			],
 		};
 	}
 

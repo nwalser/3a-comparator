@@ -3,30 +3,35 @@
         "name": "Aktien Global",
         "assetGroup": "Stocks Global",
         "annualPerformance": 0.07,
-        "defaultAnnualPerformance": 0.07
+        "defaultAnnualPerformance": 0.07,
+        "color": "#5eb4ff"
     },
     {
         "name": "Aktien ESG",
         "assetGroup": "Stocks ESG",
         "annualPerformance": 0.05,
-        "defaultAnnualPerformance": 0.05
+        "defaultAnnualPerformance": 0.05,
+        "color": "#5eb4ff"
     },
     {
         "name": "Aktien Schweiz",
         "assetGroup": "Stocks Switzerland",
         "annualPerformance": 0.06,
-        "defaultAnnualPerformance": 0.06
+        "defaultAnnualPerformance": 0.06,
+        "color": "#5eb4ff"
     },
     {
         "name": "Obligationen",
         "assetGroup": "Bonds",
         "annualPerformance": 0.03,
-        "defaultAnnualPerformance": 0.03
+        "defaultAnnualPerformance": 0.03,
+        "color": "#e45eff"
     },
     {
         "name": "Immobilien",
         "assetGroup": "Real Estate",
         "annualPerformance": 0.04,
-        "defaultAnnualPerformance": 0.04
+        "defaultAnnualPerformance": 0.04,
+        "color": "#ffdf5e"
     }
 ]

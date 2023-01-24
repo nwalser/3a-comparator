@@ -12,10 +12,12 @@
 	import { SimulationStore } from 'src/model/PortfolioStore';
 	import SimulationDetailChart from 'src/components/simulation/SimulationDetailChart.svelte';
 	import PortfolioFees from 'src/components/simulation/PortfolioFees.svelte';
-	import ProductFees from 'src/components/simulation/ProductFees.svelte';
 	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
+	import { CurrencyStore } from 'src/model/Currency';
 
 	let simulation: SimulationResult;
+
+	let yearlyCostsText: string = "";
 
 	$: {
 		simulation = $SimulationStore.find(
@@ -29,6 +31,11 @@
 		if (simulation === undefined) {
 			throw error(404);
 		}
+
+		yearlyCostsText += (simulation.portfolio.getRelativeYearlyCosts() * 100).toFixed(2);
+		yearlyCostsText += "%";
+		yearlyCostsText += " - ";
+		yearlyCostsText += $CurrencyStore.format(simulation.portfolio.getAbsoluteYearlyCosts());
 	}
 </script>
 
@@ -37,23 +44,31 @@
 		<Hero src="" alt="programmer working at desk in office" />
 	</span>
 	<span slot="body">
-		<div class="grid grid-cols-2 gap-4">
-			<SimulationHeader class="col-span-2" {simulation} />
-			<PortfolioFees fees={simulation.portfolio.fees} />
+		<div class="grid grid-cols-3 gap-4">
+			<SimulationHeader class="col-span-3" {simulation} />
 
-			<Panel class="row-span-2">
-				<h1 class="text-2xl font-bold pb-3">Anlageklassen</h1>
-				<AssetAllocationChart assets={simulation.portfolio.assets} class="h-96" />
+			<Panel class="col-span-3">
+				<h1 class="text-2xl font-bold pb-3">
+					Gebühren ({yearlyCostsText})
+				</h1>
+				<p class="text-sm">
+					Alle Gebühren sind immer auf ein Jahr bezogen. Die Gesammtkosten Jährlich sind auf den
+					Portfolio Wert bezogen.
+				</p>
+				<PortfolioFees portfolio={simulation.portfolio} />
 			</Panel>
-			
-			<ProductFees assets={simulation.portfolio.assets} />
 
-			<Panel class="col-span-2">
-				<h1 class="text-2xl font-bold pb-3">Vermögensentwicklung</h1>
+			<Panel class="col-span-3">
+				<h1 class="text-2xl font-bold pb-3">Anlageklassen</h1>
+				<AssetAllocationChart assets={simulation.portfolio.assets} class="h-60" />
+			</Panel>
+
+			<Panel class="col-span-3">
+				<h1 class="text-2xl font-bold pb-3">Errechnete Vermögensentwicklung</h1>
 				<SimulationDetailChart {simulation} class="h-96" />
 			</Panel>
 
-			<Panel class="col-span-2">
+			<Panel class="col-span-3">
 				<h1 class="text-2xl font-bold pb-3">Altersrente nach Trinity Studie</h1>
 				<p>TODO</p>
 			</Panel>
