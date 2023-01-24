@@ -41,7 +41,7 @@
 					</p>
 				</div>
 			</div>
-			<AssetAllocationPreviewChart class="h-24 w-24" assets={simulation.portfolio.assets} />
+			<AssetAllocationPreviewChart class="h-20 w-20" assets={simulation.portfolio.assets} />
 		</div>
 	</div>
 </a>

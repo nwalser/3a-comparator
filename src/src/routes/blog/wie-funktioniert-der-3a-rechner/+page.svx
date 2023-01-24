@@ -1,7 +1,7 @@
 ---
 id: 1
 layout: post
-title: "Was gibt es für Gebühren"
+title: "Wie funktioniert der 3A Rechner"
 description: ""
 author: Nathaniel Walser
 authorLink: "https://www.nathaniel-walser.com"

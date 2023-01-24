@@ -26,8 +26,6 @@
 				sim.portfolio.name === $page.params.strategy
 		)!;
 
-		console.log($page.params.provider);
-
 		if (simulation === undefined) {
 			throw error(404);
 		}
@@ -71,9 +69,9 @@
 	</span>
 	<span slot="side">
 		<div class="grid grid-cols-1 gap-4">
-			<Disclaimer />
 			<PersonalSituation />
 			<AveragePerformance />
+			<Disclaimer />
 		</div>
 	</span>
 </TwoColumnLayout>

@@ -6,13 +6,15 @@
 </script>
 
 <div class="group relative flex flex-col overflow-hidden rounded-lg bg-white">
-	<div class="bg-white">
-		<img src={post.imageSrc} alt={post.imageAlt} class="{aspect} object-fit object-center" />
-	</div>
+	{#if post.imageSrc}
+		<div class="bg-white">
+			<img src={post.imageSrc} alt={post.imageAlt} class="{aspect} object-fit object-center" />
+		</div>
+	{/if}
 	<div class="flex flex-1 flex-col space-y-2 p-4">
 		{#if post.updated}
 			<p class="text-gray-900 text-sm -mb-2">
-				Updated {post.updated}
+				Aktualisiert am {post.updated}
 			</p>
 		{/if}
 		<h2 class="font-bold text-gray-900 text-2xl">

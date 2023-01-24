@@ -1,5 +1,6 @@
 <script>
 	import Panel from 'src/components/Panel.svelte';
+	import { CurrencyStore } from 'src/model/Currency';
 	import {
 		AgeStore,
 		InitialAssetsStore,
@@ -18,7 +19,7 @@
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="0.00"
-				min="0"
+				min="18"
 				max="100"
 				aria-describedby="price-currency"
 				bind:value={$AgeStore}
@@ -50,8 +51,8 @@
 
 	{#if $LiquidationAgeStore - $AgeStore < 15}
 		<p class="text-sm text-red-500 mt-1">
-			Achtung! Der Investitionszeitraum beträgt nur {$LiquidationAgeStore - $AgeStore} Jahre. Es ist
-			mit einem erhöhten Risiko zu rechnen, wenn der Investitionszeitraum unter 15 Jahren liegt.
+			Der Investitionszeitraum beträgt nur {$LiquidationAgeStore - $AgeStore} Jahre. Es ist mit einem
+			erhöhten Risiko zu rechnen, wenn der Investitionszeitraum unter 15 Jahren liegt.
 		</p>
 	{/if}
 
@@ -64,6 +65,7 @@
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="7056"
+				min="0"
 				aria-describedby="price-currency"
 				bind:value={$YearlyContributionsStore}
 			/>
@@ -72,6 +74,14 @@
 			</div>
 		</div>
 	</div>
+	
+	{#if $YearlyContributionsStore > 7056}
+		<p class="text-sm text-red-500 mt-1">
+			Der Maximalbetrag der Säule 3A für das Jahr 2023 beträgt {$CurrencyStore.format(7056)}.
+			Steuertechnisch macht es keinen Sinn, mehr als diesen Betrag einzuzahlen.
+		</p>
+	{/if}
+
 	<div>
 		<label for="price" class="block text-sm font-medium text-gray-700 mt-2"
 			>Vorhandenes 3A Kapital</label
@@ -81,6 +91,7 @@
 				type="number"
 				class="block w-full rounded-md border-gray-300 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 				placeholder="0.00"
+				min="0"
 				aria-describedby="price-currency"
 				bind:value={$InitialAssetsStore}
 			/>
@@ -89,4 +100,5 @@
 			</div>
 		</div>
 	</div>
+	<slot />
 </Panel>
