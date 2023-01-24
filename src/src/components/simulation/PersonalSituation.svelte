@@ -1,6 +1,11 @@
 <script>
 	import Panel from 'src/components/Panel.svelte';
-	import { AgeStore, InitialAssetsStore, LiquidationAgeStore, YearlyContributionsStore } from 'src/model/PortfolioStore';
+	import {
+		AgeStore,
+		InitialAssetsStore,
+		LiquidationAgeStore,
+		YearlyContributionsStore
+	} from 'src/model/PortfolioStore';
 </script>
 
 <Panel>
@@ -25,7 +30,7 @@
 	</div>
 	<div>
 		<label for="price" class="block text-sm font-medium text-gray-700 mt-2"
-			>Alter bei Pensionierung</label
+			>Geplantes Liquidierungsalter</label
 		>
 		<div class="relative mt-1 rounded-md shadow-sm">
 			<input
@@ -42,6 +47,14 @@
 			</div>
 		</div>
 	</div>
+
+	{#if $LiquidationAgeStore - $AgeStore < 15}
+		<p class="text-sm text-red-500 mt-1">
+			Achtung! Der Investitionszeitraum beträgt nur {$LiquidationAgeStore - $AgeStore} Jahre. Es ist
+			mit einem erhöhten Risiko zu rechnen, wenn der Investitionszeitraum unter 15 Jahren liegt.
+		</p>
+	{/if}
+
 	<div>
 		<label for="price" class="block text-sm font-medium text-gray-700 mt-2"
 			>Jährliche 3A Einzahlungen</label

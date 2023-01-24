@@ -23,8 +23,7 @@
 				display: false
 			},
 			legend: {
-				display: true,
-				position: 'bottom'
+				display: false
 			},
 			tooltip: {
 				callbacks: {
@@ -65,7 +64,6 @@
 					backgroundColor: assets.map(asset => $AssetGroupColorsStore.find(a => a.assetGroup == asset.assetGroup)?.color ?? "#ff5e6c"),
 				}
 			],
-			border: 0
 		};
 	}
 
