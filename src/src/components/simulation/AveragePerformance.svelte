@@ -7,7 +7,7 @@
 	<h2 class="text-2xl font-bold mb-3">Durchschnittliche Renditen</h2>
 	<p class="text-sm">Die durchschnittlich angenommenen Renditen für verschiedene Anlageklassen.</p>
 	<p class="text-sm mt-2">
-		Die vorgegebenen Werte einsprechen einem historischen Marktdurchschnitt.
+		Die vorgegebenen Werte entsprechen einem historischen Marktdurchschnitt.
 	</p>
 
 	{#each $AssetGroupPerformancesStore as assetGroupPerformance}
