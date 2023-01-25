@@ -22,6 +22,7 @@
 		/>
 	</span>
 	<span slot="body">
+		<a class="hidden" href="/sitemap">Sitemap</a>
 		<div class="grid gap-4">
 			<Panel>
 				<Prose>
