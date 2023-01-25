@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"@types/gtag.js": "^0.0.12",
+		"@types/xml": "^1.0.8",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.13",
@@ -42,6 +43,7 @@
 		"reflect-metadata": "^0.1.13",
 		"svelte-chartjs": "^3.1.2",
 		"svelte-meta-tags": "^2.6.5",
-		"tailwind-scrollbar": "^2.1.0"
+		"tailwind-scrollbar": "^2.1.0",
+		"xml": "^1.0.1"
 	}
 }

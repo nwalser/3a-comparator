@@ -21,6 +21,7 @@ type AssetBlueprint = {
 }
 
 export class PortfolioBlueprint {
+    id: string = "";
     providerAbbreviation: string = "";
     name: string = "";
     portfolioFees: FeeBlueprint[] = [];
@@ -59,7 +60,7 @@ export function generatePortfolio(blueprint: PortfolioBlueprint, provider: Provi
         return new SecurityAsset(asset.name, asset.allocation, asset.annualPerformance, asset.annualFees, asset.assetGroup);
     });
 
-    let portfolio = new Portfolio(provider, blueprint.name, fees, assets);
+    let portfolio = new Portfolio(blueprint.id, provider, blueprint.name, fees, assets);
 
     return portfolio;
 }

@@ -24,7 +24,7 @@
 		simulation = $SimulationStore.find(
 			(sim) =>
 				sim.portfolio.provider.abbreviation === $page.params.provider &&
-				sim.portfolio.name === $page.params.strategy
+				sim.portfolio.id === $page.params.id
 		)!;
 
 		if (simulation === undefined) {
