@@ -17,7 +17,7 @@
 		</p>
 
 		<p class="inline-flex items-center transparent pb-4 pr-1 text-base font-medium text-gray-700">
-			{$PortfolioBlueprintStore.length - $SortedSimulationStore.length} Strategien wurden gefiltert
+			{$PortfolioBlueprintStore.length - $SortedSimulationStore.length} von {$PortfolioBlueprintStore.length} Strategien wurden gefiltert
 		</p>
 	</div>
 </Panel>
