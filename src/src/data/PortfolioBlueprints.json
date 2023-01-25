@@ -1,5 +1,6 @@
 [
     {
+        "id": "3a-konto",
         "providerAbbreviation": "viac",
         "name": "3a Konto",
         "portfolioFees": [],
@@ -12,6 +13,7 @@
         ]
     },
     {
+        "id": "konto-plus-global",
         "providerAbbreviation": "viac",
         "name": "Konto Plus Global",
         "portfolioFees": [],
@@ -29,6 +31,7 @@
         ]
     },
     {
+        "id": "global-20",
         "providerAbbreviation": "viac",
         "name": "Global 20",
         "portfolioFees": [
@@ -52,6 +55,7 @@
         ]
     },
     {
+        "id": "global-40",
         "providerAbbreviation": "viac",
         "name": "Global 40",
         "portfolioFees": [
@@ -75,6 +79,7 @@
         ]
     },
     {
+        "id": "global-60",
         "providerAbbreviation": "viac",
         "name": "Global 60",
         "portfolioFees": [
@@ -98,6 +103,7 @@
         ]
     },
     {
+        "id": "global-80",
         "providerAbbreviation": "viac",
         "name": "Global 80",
         "portfolioFees": [
@@ -121,6 +127,7 @@
         ]
     },
     {
+        "id": "global-100",
         "providerAbbreviation": "viac",
         "name": "Global 100",
         "portfolioFees": [
@@ -144,6 +151,7 @@
         ]
     },
     {
+        "id": "konto-plus-schweiz",
         "providerAbbreviation": "viac",
         "name": "Konto Plus Schweiz",
         "portfolioFees": [],
@@ -161,6 +169,7 @@
         ]
     },
     {
+        "id": "schweiz-20",
         "providerAbbreviation": "viac",
         "name": "Schweiz 20",
         "portfolioFees": [
@@ -184,6 +193,7 @@
         ]
     },
     {
+        "id": "schweiz-40",
         "providerAbbreviation": "viac",
         "name": "Schweiz 40",
         "portfolioFees": [
@@ -207,6 +217,7 @@
         ]
     },
     {
+        "id": "schweiz-60",
         "providerAbbreviation": "viac",
         "name": "Schweiz 60",
         "portfolioFees": [
@@ -230,6 +241,7 @@
         ]
     },
     {
+        "id": "schweiz-80",
         "providerAbbreviation": "viac",
         "name": "Schweiz 80",
         "portfolioFees": [
@@ -253,6 +265,7 @@
         ]
     },
     {
+        "id": "schweiz-100",
         "providerAbbreviation": "viac",
         "name": "Schweiz 100",
         "portfolioFees": [
@@ -276,6 +289,7 @@
         ]
     },
     {
+        "id": "konto-plus-nachhaltig",
         "providerAbbreviation": "viac",
         "name": "Konto Plus Nachhaltig",
         "portfolioFees": [],
@@ -293,6 +307,7 @@
         ]
     },
     {
+        "id": "global-nachhaltig-20",
         "providerAbbreviation": "viac",
         "name": "Global Nachhaltig 20",
         "portfolioFees": [
@@ -316,6 +331,7 @@
         ]
     },
     {
+        "id": "global-nachhaltig-40",
         "providerAbbreviation": "viac",
         "name": "Global Nachhaltig 40",
         "portfolioFees": [
@@ -339,6 +355,7 @@
         ]
     },
     {
+        "id": "global-nachhaltig-60",
         "providerAbbreviation": "viac",
         "name": "Global Nachhaltig 60",
         "portfolioFees": [
@@ -362,6 +379,7 @@
         ]
     },
     {
+        "id": "global-nachhaltig-80",
         "providerAbbreviation": "viac",
         "name": "Global Nachhaltig 80",
         "portfolioFees": [
@@ -385,6 +403,7 @@
         ]
     },
     {
+        "id": "global-nachhaltig-100",
         "providerAbbreviation": "viac",
         "name": "Global Nachhaltig 100",
         "portfolioFees": [
@@ -408,7 +427,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "aktien-0",
+        "providerAbbreviation": "finpension",
         "name": "Aktien 0",
         "portfolioFees": [
             {
@@ -431,7 +451,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "global-aktien-20",
+        "providerAbbreviation": "finpension",
         "name": "Global Aktien 20",
         "portfolioFees": [
             {
@@ -467,7 +488,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "schweiz-aktien-20",
+        "providerAbbreviation": "finpension",
         "name": "Schweiz Aktien 20",
         "portfolioFees": [
             {
@@ -503,7 +525,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "global-aktien-40",
+        "providerAbbreviation": "finpension",
         "name": "Global Aktien 40",
         "portfolioFees": [
             {
@@ -540,7 +563,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "schweiz-aktien-40",
+        "providerAbbreviation": "finpension",
         "name": "Schweiz Aktien 40",
         "portfolioFees": [
             {
@@ -577,7 +601,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "global-aktien-60",
+        "providerAbbreviation": "finpension",
         "name": "Global Aktien 60",
         "portfolioFees": [
             {
@@ -614,7 +639,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "schweiz-aktien-60",
+        "providerAbbreviation": "finpension",
         "name": "Schweiz Aktien 60",
         "portfolioFees": [
             {
@@ -651,7 +677,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "global-aktien-80",
+        "providerAbbreviation": "finpension",
         "name": "Global Aktien 80",
         "portfolioFees": [
             {
@@ -688,7 +715,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "schweiz-aktien-80",
+        "providerAbbreviation": "finpension",
         "name": "Schweiz Aktien 80",
         "portfolioFees": [
             {
@@ -725,7 +753,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "global-aktien-100",
+        "providerAbbreviation": "finpension",
         "name": "Global Aktien 100",
         "portfolioFees": [
             {
@@ -750,7 +779,8 @@
         ]
     },
     {
-        "providerAbbreviation": "fp",
+        "id": "schweiz-aktien-100",
+        "providerAbbreviation": "finpension",
         "name": "Schweiz Aktien 100",
         "portfolioFees": [
             {
@@ -775,7 +805,8 @@
         ]
     },
     {
-        "providerAbbreviation": "tw",
+        "id": "global-aktien-100",
+        "providerAbbreviation": "truewealth",
         "name": "Global Aktien 100",
         "portfolioFees": [],
         "variable": true,

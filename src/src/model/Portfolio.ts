@@ -72,12 +72,14 @@ export class RelativePortfolioFee extends PortfolioFee {
 }
 
 export class Portfolio {
+    id: string;
     provider: Provider;
     name: string;
     fees: PortfolioFee[];
     assets: SecurityAsset[];
 
-    constructor(provider: Provider, name: string, fees: PortfolioFee[] = [], assets: SecurityAsset[] = []) {
+    constructor(id: string, provider: Provider, name: string, fees: PortfolioFee[] = [], assets: SecurityAsset[] = []) {
+        this.id = id;
         this.provider = provider;
         this.name = name;
         this.fees = fees;
