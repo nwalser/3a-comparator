@@ -824,5 +824,26 @@
                 "annualFees": 0.0002
             }
         ]
+    },
+    {
+        "id": "nachhaltig-aktien-100",
+        "providerAbbreviation": "truewealth",
+        "name": "Nachhaltig Aktien 100",
+        "portfolioFees": [],
+        "variable": true,
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.01,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Aktien ESG",
+                "assetGroup": "Stocks ESG",
+                "allocation": 0.99,
+                "annualFees": 0.0002
+            }
+        ]
     }
 ]
