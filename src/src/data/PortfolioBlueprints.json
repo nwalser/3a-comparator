@@ -815,13 +815,13 @@
                 "name": "Geld",
                 "allocation": 0.01,
                 "annualPerformance": 0.01,
-                "annualFees": 0.0001
+                "annualFees": 0.0002
             },
             {
                 "name": "Aktien Global",
                 "assetGroup": "Stocks Global",
                 "allocation": 0.99,
-                "annualFees": 0.0001
+                "annualFees": 0.0002
             }
         ]
     }
