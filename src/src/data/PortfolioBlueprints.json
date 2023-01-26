@@ -836,13 +836,13 @@
                 "name": "Geld",
                 "allocation": 0.01,
                 "annualPerformance": 0.01,
-                "annualFees": 0.0002
+                "annualFees": 0.0003
             },
             {
                 "name": "Aktien ESG",
                 "assetGroup": "Stocks ESG",
                 "allocation": 0.99,
-                "annualFees": 0.0002
+                "annualFees": 0.0003
             }
         ]
     }
