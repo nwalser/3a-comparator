@@ -14,5 +14,8 @@
 				<slot name="body" />
 			</div>
 		</div>
+		<div class="grid grid-cols-1 gap-4 mt-4">
+			<slot name="footer" />
+		</div>
 	</span>
 </MainLayout>
