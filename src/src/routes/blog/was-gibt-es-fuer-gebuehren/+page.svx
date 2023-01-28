@@ -1,8 +1,8 @@
 ---
 id: 1
 layout: post
-title: "Was gibt es für Gebühren"
-description: ""
+title: "Welche Gebühren können bei einem 3A Portfolio anfallen?"
+description: "Eine Auflistung verschiedener Gebühren welche bei einem 3A Portfolio anfallen können."
 author: Nathaniel Walser
 authorLink: "https://www.nathaniel-walser.com"
 published: "2023/01/24"
