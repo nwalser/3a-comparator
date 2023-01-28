@@ -16,7 +16,7 @@ export const YearlyContributionsStore = writable(7056);
 
 
 export const CurrentPageStore = writable(0);
-export const NumberOfEntriesPerPageStore = writable(8);
+export const NumberOfEntriesPerPageStore = writable(12);
 
 
 export const FilteredPortfolioBlueprintStore = derived([PortfolioBlueprintStore, AssetGroupFiltersStore], ([$portfolioBlueprintStore, $assetGroupFiltersStore]) => {
