@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { PortfolioBlueprintStore } from 'src/model/PortfolioBlueprintStore';
 	import {
 		CurrentPageStore,
 		NumberOfEntriesPerPageStore,
-		PortfolioBlueprintStore,
 		SortedSimulationStore
 	} from 'src/model/PortfolioStore';
+
 	import Panel from '../Panel.svelte';
 </script>
 

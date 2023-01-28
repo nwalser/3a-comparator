@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CurrencyStore } from 'src/model/Currency';
-	import { PortfolioBlueprintStore } from 'src/model/PortfolioStore';
+	import { PortfolioBlueprintStore } from 'src/model/PortfolioBlueprintStore';
 	import type { SimulationResult } from 'src/model/Simulator';
 	import AssetAllocationPreviewChart from './AssetAllocationPreviewChart.svelte';
 

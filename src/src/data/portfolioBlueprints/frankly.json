@@ -1,0 +1,365 @@
+[
+    {
+        "id": "light-10-active",
+        "providerAbbreviation": "frankly",
+        "name": "Light 10 Active",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.10,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.15,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.75,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "gentle-25-active",
+        "providerAbbreviation": "frankly",
+        "name": "Gentle 25 Active",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.26,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.15,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.59,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "moderate-45-active",
+        "providerAbbreviation": "frankly",
+        "name": "Moderate 45 Active",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.45,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.15,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.40,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "strong-75-active",
+        "providerAbbreviation": "frankly",
+        "name": "Strong 75 Active",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.75,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.05,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.20,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "extreme-95-active",
+        "providerAbbreviation": "frankly",
+        "name": "Extreme 95 Active",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.95,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.05,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "gentle-20-index",
+        "providerAbbreviation": "frankly",
+        "name": "Gentle 20 Index",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.20,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.675,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.05,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Rohstoffe",
+                "assetGroup": "Ressources",
+                "allocation": 0.045,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Edelmetalle",
+                "assetGroup": "Precious Metals",
+                "allocation": 0.03,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "moderate-45-index",
+        "providerAbbreviation": "frankly",
+        "name": "Moderate 45 Index",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.45,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.425,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.05,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Rohstoffe",
+                "assetGroup": "Ressources",
+                "allocation": 0.045,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Edelmetalle",
+                "assetGroup": "Precious Metals",
+                "allocation": 0.03,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "strong-75-index",
+        "providerAbbreviation": "frankly",
+        "name": "Strong 75 Index",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.75,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.125,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.05,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Rohstoffe",
+                "assetGroup": "Ressources",
+                "allocation": 0.045,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Edelmetalle",
+                "assetGroup": "Precious Metals",
+                "allocation": 0.03,
+                "annualFees": 0.00
+            }
+        ]
+    },
+    {
+        "id": "extreme-95-index",
+        "providerAbbreviation": "frankly",
+        "name": "Extreme 95 Index",
+        "portfolioFees": [
+            {
+                "name": "All in Gebühr",
+                "type": "relative",
+                "value": 0.0045
+            },
+            {
+                "name": "Geschätzte zusätzliche Gebühren",
+                "type": "relative",
+                "value": 0.0002
+            }
+        ],
+        "assets": [
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.95,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.025,
+                "annualFees": 0.00
+            },
+            {
+                "name": "Edelmetalle",
+                "assetGroup": "Precious Metals",
+                "allocation": 0.025,
+                "annualFees": 0.00
+            }
+        ]
+    }
+]

@@ -33,5 +33,19 @@
         "annualPerformance": 0.04,
         "defaultAnnualPerformance": 0.04,
         "color": "#ffdf5e"
+    },
+    {
+        "name": "Rohstoffe",
+        "assetGroup": "Ressources",
+        "annualPerformance": 0.03,
+        "defaultAnnualPerformance": 0.03,
+        "color": "#ffdf5e"
+    },
+    {
+        "name": "Edelmetalle",
+        "assetGroup": "Precious Metals",
+        "annualPerformance": 0.03,
+        "defaultAnnualPerformance": 0.03,
+        "color": "#ffdf5e"
     }
 ]

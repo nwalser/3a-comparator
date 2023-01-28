@@ -16,5 +16,11 @@
         "name": "TrueWealth",
         "logo": "truewealth.jpeg",
         "website": "https://www.truewealth.ch/"
+    },
+    {
+        "abbreviation": "frankly",
+        "name": "frankly",
+        "logo": "frankly.svg",
+        "website": "https://www.frankly.ch/"
     }
 ]
