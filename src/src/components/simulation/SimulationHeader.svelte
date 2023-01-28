@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { CurrencyStore } from 'src/model/Currency';
+	import { AgeStore, LiquidationAgeStore } from 'src/model/PortfolioStore';
 	import type { SimulationResult } from 'src/model/Simulator';
 
 	export let clazz: string = '';
@@ -14,35 +15,41 @@
 	$: totalFees = simulation.getTotalFees();
 </script>
 
-<div class="rounded-lg bg-white shadow relative overflow-hidden {clazz}">
-	<div class="z-20 flex align-middle justify-start items-center px-5 py-6 w-full">
-		<div class="flex align-middle justify-start items-center flex-grow">
-			<img
-				src="/logos/{simulation.portfolio.provider.logo}"
-				alt=""
-				class="w-16 h-16 object-cover mr-4"
-			/>
-
-			<div>
-				<p class="text-xl">
-					<span class="font-bold">{simulation.portfolio.provider.name}</span> -
-					<span>{simulation.portfolio.name}</span>
-				</p>
-				<p>
-					Endkapital: <span class="text-green-600 font-bold">{$CurrencyStore.format(totalEquity)}</span>
-				</p>
-				<p>
-					Gebühren: <span class="text-red-600">{$CurrencyStore.format(-totalFees)}</span>
-				</p>
-			</div>
-		</div>
-		<a
-			type="button"
-			href={simulation.portfolio.provider.website}
-			target="_blank"
-			rel="noreferrer"
-			class="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-			>Zum Anbieter</a
-		>
-	</div>
-</div>
+<table class="min-w-full divide-y divide-gray-300">
+	<tbody>
+		<tr class="border-b border-gray-200">
+			<td class="py-2 pl-0 pr-3">
+				<div class="font-medium text-gray-900">Anbieter</div>
+			</td>
+			<td class="py-2 pl-3 pr-4 text-right  text-gray-500">
+				{simulation.portfolio.provider.name}
+			</td>
+		</tr>
+		<tr class="border-b border-gray-200">
+			<td class="py-2 pl-0 pr-3">
+				<div class="font-medium text-gray-900">Strategie</div>
+			</td>
+			<td class="py-2 pl-3 pr-4 text-right  text-gray-500">
+				{simulation.portfolio.name}
+			</td>
+		</tr>
+		<tr class="border-b border-gray-200">
+			<td class="py-2 pl-0 pr-3">
+				<div class="font-medium text-gray-900">
+					Berechnetes Endkapital (mit {$LiquidationAgeStore})
+				</div>
+			</td>
+			<td class="py-2 pl-3 pr-4 text-right  text-gray-500">
+				<span class="text-green-600 font-bold">{$CurrencyStore.format(totalEquity)}</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="py-2 pl-0 pr-3">
+				<div class="font-medium text-gray-900">Total berechnete Gebühren</div>
+			</td>
+			<td class="py-2 pl-3 pr-4 text-right  text-gray-500">
+				<span class="text-red-600">{$CurrencyStore.format(-totalFees)}</span>
+			</td>
+		</tr>
+	</tbody>
+</table>

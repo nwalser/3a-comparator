@@ -16,6 +16,7 @@
 	import { CurrencyStore } from 'src/model/Currency';
 	import { MetaTags } from 'svelte-meta-tags';
 	import Prose from 'src/components/Prose.svelte';
+	import AssetAllocationTable from 'src/components/simulation/AssetAllocationTable.svelte';
 
 	let simulation: SimulationResult;
 
@@ -54,37 +55,40 @@
 			<Panel class="col-span-3">
 				<Prose>
 					<h1>
-						Details zur Strategie {simulation.portfolio.provider.name} {simulation.portfolio.name}
+						Details zur Strategie {simulation.portfolio.provider.name}
+						{simulation.portfolio.name}
 					</h1>
 
-					<!-- 					<div class="not-prose">
+					<div class="not-prose">
 						<SimulationHeader class="col-span-3" {simulation} />
-					</div> -->
+					</div>
 
-					<h2>
+					<h2 class="mb-0">
 						Gesamtkosten ({yearlyCostsText})
 					</h2>
-					<p>
-						Alle Werte sind immer auf ein Jahr bezogen. Die Gesamtkosten jährlich sind prozentual
-						auf den Portfoliowert bezogen.
-						<a href="/blog/was-gibt-es-fuer-gebuehren" class="text-blue-600 underline"
-							>Mehr über Gebühren erfahren</a
-						>
-					</p>
-
 					<div class="not-prose">
 						<PortfolioFees portfolio={simulation.portfolio} />
 					</div>
 
-					<h2>Anlageklassen</h2>
+					<h2 class="mb-0">Anlageklassen</h2>
 					<div class="not-prose">
-						<AssetAllocationChart assets={simulation.portfolio.assets} class="h-60" />
+						<div class="grid grid-cols-3 gap-6">
+							<div class="col-span-3 md:flex items-center md:col-span-2">
+								<div class="w-full">
+									<AssetAllocationTable assets={simulation.portfolio.assets} />
+								</div>
+							</div>
+							<div class="col-span-3 md:flex items-center md:col-span-1">
+								<AssetAllocationChart
+									assets={simulation.portfolio.assets}
+									class="max-h-40 w-full"
+								/>
+							</div>
+						</div>
 					</div>
 
-					<h2>Errechnete Vermögensentwicklung</h2>
-					<div class="not-prose">
-						<SimulationDetailChart {simulation} class="h-96" />
-					</div>
+					<h2 class="mb-4">Errechnete Vermögensentwicklung</h2>
+					<SimulationDetailChart {simulation} class="h-96" />
 				</Prose>
 			</Panel>
 		</div>
