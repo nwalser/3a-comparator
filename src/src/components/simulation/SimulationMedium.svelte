@@ -38,7 +38,7 @@
 					</p>
 					<p>
 						Gebühren: <span class="text-red-600"
-							>{$CurrencyStore.format(-simulation.getTotalFees())}</span
+							>{$CurrencyStore.format(Math.abs(simulation.getTotalFees()))}</span
 						>
 					</p>
 				</div>
