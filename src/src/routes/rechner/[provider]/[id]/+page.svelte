@@ -42,6 +42,7 @@
 <MetaTags
 	title={simulation.portfolio.provider.name + ' ' + simulation.portfolio.name}
 	titleTemplate="%s - 3A Rechner"
+	description="tet"
 />
 
 <TwoColumnLayout>
@@ -53,8 +54,7 @@
 			<Panel class="col-span-3">
 				<Prose>
 					<h1>
-						Angebot von {simulation.portfolio.provider.name} mit der Strategie "{simulation
-							.portfolio.name}"
+						Details zur Strategie {simulation.portfolio.provider.name} {simulation.portfolio.name}
 					</h1>
 
 					<!-- 					<div class="not-prose">
@@ -91,7 +91,9 @@
 	</span>
 	<span slot="side">
 		<div class="grid grid-cols-1 gap-4">
-			<PersonalSituation />
+			<div class="hidden md:block">
+				<PersonalSituation />
+			</div>
 
 			<div class="hidden md:block">
 				<AveragePerformance />
