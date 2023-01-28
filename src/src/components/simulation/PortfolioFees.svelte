@@ -20,7 +20,7 @@
 				>
 				<th
 					scope="col"
-					class="hidden py-3.5 px-3 text-right text-sm font-semibold text-gray-900 sm:table-cell"
+					class="py-3.5 px-3 text-right text-sm font-semibold text-gray-900 table-cell"
 					>Total</th
 				>
 			</tr>
@@ -80,7 +80,7 @@
 				/>
 				<th
 					scope="col"
-					class="hidden py-3.5 px-3 text-right text-sm font-semibold text-gray-900 sm:table-cell"
+					class="py-3.5 px-3 text-right text-sm font-semibold text-gray-900 table-cell"
 					></th
 				>
 			</tr>
@@ -91,7 +91,7 @@
 					<td class="py-2 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
 						<div class="font-medium text-gray-900">{asset.name}</div>
 					</td>
-					<td class="hidden py-2 px-3 text-right text-sm text-gray-500 sm:table-cell"
+					<td class="py-2 px-3 text-right text-sm text-gray-500 table-cell"
 						>{(asset.annualizedFees * 100).toFixed(2)}% x {(asset.allocation * 100).toFixed(0)}%</td
 					>
 					<td class="py-2 pl-3 pr-4 text-right text-sm text-gray-500 sm:pr-6 md:pr-0"
@@ -105,7 +105,7 @@
 				<th
 					scope="row"
 					colspan="2"
-					class="hidden pl-6 pr-3 pt-4 text-right text-sm font-semibold text-gray-900 sm:table-cell md:pl-0"
+					class="pl-6 pr-3 pt-4 text-right text-sm font-semibold text-gray-900 table-cell md:pl-0"
 					>Gesamtkosten jährlich (TER):</th
 				>
 				<td class="pl-3 pr-4 pt-4 text-right text-sm font-semibold text-gray-900 sm:pr-6 md:pr-0">

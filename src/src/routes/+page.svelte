@@ -58,6 +58,13 @@
 		</div>
 	</span>
 	<span slot="side">
-		<Disclaimer />
+		<div class="hidden md:block">
+			<Disclaimer />
+		</div>
+	</span>
+	<span slot="footer">
+		<div class="block md:hidden">
+			<Disclaimer />
+		</div>
 	</span>
 </TwoColumnLayout>

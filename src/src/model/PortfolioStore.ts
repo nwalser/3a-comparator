@@ -60,6 +60,19 @@ export const PaginatedSimulationStore = derived([SortedSimulationStore, CurrentP
     }
 );
 
+export const CountetSimulationStore = derived([PaginatedSimulationStore, CurrentPageStore, NumberOfEntriesPerPageStore],
+    ([$paginatedSimulationStore, $currentPageStore, $numberOfEntriesPerPageStore]) => {
+        let rank = $currentPageStore*$numberOfEntriesPerPageStore;
+
+        return $paginatedSimulationStore.map(e => {
+            rank++
+
+            return { rank: rank, simulationResult: e }
+        })
+    }
+);
+
+
 
 export const BestSimulationStore = derived([SortedSimulationStore], ([$sortedSimulationStore]) => {
     return $sortedSimulationStore[0];

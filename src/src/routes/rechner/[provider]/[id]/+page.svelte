@@ -15,6 +15,7 @@
 	import Disclaimer from 'src/components/simulation/Disclaimer.svelte';
 	import { CurrencyStore } from 'src/model/Currency';
 	import { MetaTags } from 'svelte-meta-tags';
+	import Prose from 'src/components/Prose.svelte';
 
 	let simulation: SimulationResult;
 
@@ -49,38 +50,56 @@
 	</span>
 	<span slot="body">
 		<div class="grid grid-cols-3 gap-4">
-			<SimulationHeader class="col-span-3" {simulation} />
-
 			<Panel class="col-span-3">
-				<h1 class="text-2xl font-bold pb-3">
-					Gesamtkosten ({yearlyCostsText})
-				</h1>
-				<p class="text-sm">
-					Alle Werte sind immer auf ein Jahr bezogen. Die Gesamtkosten jährlich sind prozentual auf
-					den Portfoliowert bezogen.
-					<a href="/blog/was-gibt-es-fuer-gebuehren" class="text-blue-600 underline"
-						>Mehr über Gebühren erfahren</a
-					>
-				</p>
-				<PortfolioFees portfolio={simulation.portfolio} />
-			</Panel>
+				<Prose>
+					<h1>
+						Angebot von {simulation.portfolio.provider.name} mit der Strategie "{simulation
+							.portfolio.name}"
+					</h1>
 
-			<Panel class="col-span-3">
-				<h1 class="text-2xl font-bold pb-3">Anlageklassen</h1>
-				<AssetAllocationChart assets={simulation.portfolio.assets} class="h-60" />
-			</Panel>
+					<!-- 					<div class="not-prose">
+						<SimulationHeader class="col-span-3" {simulation} />
+					</div> -->
 
-			<Panel class="col-span-3">
-				<h1 class="text-2xl font-bold pb-3">Errechnete Vermögensentwicklung</h1>
-				<SimulationDetailChart {simulation} class="h-96" />
+					<h2>
+						Gesamtkosten ({yearlyCostsText})
+					</h2>
+					<p>
+						Alle Werte sind immer auf ein Jahr bezogen. Die Gesamtkosten jährlich sind prozentual
+						auf den Portfoliowert bezogen.
+						<a href="/blog/was-gibt-es-fuer-gebuehren" class="text-blue-600 underline"
+							>Mehr über Gebühren erfahren</a
+						>
+					</p>
+
+					<div class="not-prose">
+						<PortfolioFees portfolio={simulation.portfolio} />
+					</div>
+
+					<h2>Anlageklassen</h2>
+					<div class="not-prose">
+						<AssetAllocationChart assets={simulation.portfolio.assets} class="h-60" />
+					</div>
+
+					<h2>Errechnete Vermögensentwicklung</h2>
+					<div class="not-prose">
+						<SimulationDetailChart {simulation} class="h-96" />
+					</div>
+				</Prose>
 			</Panel>
 		</div>
 	</span>
 	<span slot="side">
 		<div class="grid grid-cols-1 gap-4">
 			<PersonalSituation />
-			<AveragePerformance />
-			<Disclaimer />
+
+			<div class="hidden md:block">
+				<AveragePerformance />
+			</div>
 		</div>
+	</span>
+
+	<span slot="footer">
+		<Disclaimer />
 	</span>
 </TwoColumnLayout>
