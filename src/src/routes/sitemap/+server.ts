@@ -1,10 +1,10 @@
 import 'xml';
 import xml from 'xml';
-import PortfolioBlueprints from 'src/data/PortfolioBlueprints.json';
 import Posts from 'src/data/Posts.json';
-import { PortfolioBlueprint } from 'src/model/PortfolioBuilder';
 import { plainToInstance } from 'class-transformer';
 import { Post } from 'src/model/Posts';
+
+import {PortfolioBlueprints} from 'src/model/PortfolioBlueprintStore.js'
 
 const baseUrl = "https://www.3a-rechner.ch";
 
@@ -39,9 +39,7 @@ function getOtherPages() : Page[] {
 function getPortfolioPages(): Page[] {
   let pages: Page[] = [];
 
-  let portfolioBlueprints = plainToInstance(PortfolioBlueprint, PortfolioBlueprints)
-
-  portfolioBlueprints.forEach(blueprint => {
+  PortfolioBlueprints.forEach(blueprint => {
     let page: Page = {
       loc: baseUrl + "/rechner/" + blueprint.providerAbbreviation + "/" + blueprint.id,
       updated: undefined,

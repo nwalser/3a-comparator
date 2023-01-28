@@ -9,9 +9,11 @@ import { readable } from 'svelte/store';
 import { PortfolioBlueprint } from './PortfolioBuilder';
 
 
-export const PortfolioBlueprintStore = readable([
+export const PortfolioBlueprints = [
     ...plainToInstance(PortfolioBlueprint, ViacBlueprints),
     ...plainToInstance(PortfolioBlueprint, FinpensionBlueprints),
     ...plainToInstance(PortfolioBlueprint, TrueWealthBlueprints),
     ...plainToInstance(PortfolioBlueprint, FranklyBlueprints),
-]);
+];
+
+export const PortfolioBlueprintStore = readable(PortfolioBlueprints);
