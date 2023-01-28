@@ -13,12 +13,12 @@
 	description={'Vergleiche die Kosten und Renditen diverser 3A Angebote von Banken und Vorsorgestiftungen.'}
 />
 
-<TwoColumnLayout pb={110}>
+<TwoColumnLayout pb={70}>
 	<span slot="header">
 		<img
 			src="/header/piggy-bank.svg"
-			alt="sparschwein mit objekten rundherum"
-			class="absolute bottom-0 -right-32 md:right-0 lg:right-6 h-[30rem] max-w-none -z-50"
+			alt="sparschwein mit Haus, Auto, Rechner und Münze rundherum"
+			class="absolute bottom-0 -right-32 md:right-0 lg:right-6 h-[18rem] max-w-none -z-50"
 		/>
 	</span>
 	<span slot="body">
