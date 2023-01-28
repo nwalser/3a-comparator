@@ -22,26 +22,29 @@
 	export let authorLink = '/';
 
 	onMount(async () => {
-		$PostSearchStore = "";
+		$PostSearchStore = '';
 	});
 </script>
 
-<MetaTags {title} titleTemplate="%s - Nathaniel Walser" {description}  />
+<MetaTags {title} titleTemplate="%s - Nathaniel Walser" {description} />
 
 <TwoColumnLayout>
 	<span slot="body">
 		<Panel>
-			<Prose>
-				<p class="text-sm mb-1">
-					Veröffentlich am {published} - Aktualisiert am {updated} - Author <a href={authorLink}>{author}</a>
-				</p>
+			<article class="prose max-w-none prose-headings:mb-1 prose-p:my-3 text-justify">
+				<div class="not-prose">
+					<p class="text-sm my-1">
+						Veröffentlich am {published} - Aktualisiert am {updated} - Author
+						<a href={authorLink} class="underline">{author}</a>
+					</p>
+				</div>
 				<slot />
-			</Prose>
+			</article>
 		</Panel>
 	</span>
 	<span slot="side">
-        <div class="grid gap-4">
-            <Panel>
+		<div class="grid gap-4">
+			<Panel>
 				<h2 class="text-2xl font-bold mb-3">Artikel Suchen</h2>
 
 				<div>
@@ -55,17 +58,16 @@
 						/>
 					</div>
 				</div>
-            </Panel>
-    
-            <PostList
-                posts={PostsFilteredStore}
-                maxPosts={4}
-                cols={1}
-                smCols={1}
-                aspect="aspect-[5/1]"
-                seeAllLink="/docker-compose-templates"
-            />
-        </div>
+			</Panel>
 
+			<PostList
+				posts={PostsFilteredStore}
+				maxPosts={4}
+				cols={1}
+				smCols={1}
+				aspect="aspect-[5/1]"
+				seeAllLink="/docker-compose-templates"
+			/>
+		</div>
 	</span>
 </TwoColumnLayout>

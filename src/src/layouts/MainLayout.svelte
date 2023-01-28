@@ -39,6 +39,7 @@
 							<div class="hidden md:block">
 								<div class="flex items-baseline space-x-4 ml-4">
 									<MenuItem href="/blog/wie-funktioniert-der-3a-rechner">Wie funktioniert der 3A-Rechner</MenuItem>
+									<MenuItem href="/blog/was-gibt-es-fuer-3a-konto-gebuehren">Welche Gebühren können bei einem 3A Portfolio anfallen?</MenuItem>
 								</div>
 							</div>
 						</div>
@@ -96,7 +97,8 @@
 			{#if menuOpen}
 				<div class="border-b border-gray-700 md:hidden" id="mobile-menu">
 					<div class="space-y-1 px-2 py-3 sm:px-3">
-						<MenuItem href="/rechner" mobile={true}>Rechner</MenuItem>
+						<MenuItem href="/blog/wie-funktioniert-der-3a-rechner" mobile={true}>Wie funktioniert der 3A-Rechner</MenuItem>
+						<MenuItem href="/blog/was-gibt-es-fuer-3a-konto-gebuehren" mobile={true}>Welche Gebühren können bei einem 3A Portfolio anfallen?</MenuItem>
 
 						<a
 							href="/rechner"
