@@ -1,6 +1,5 @@
 <script>
 	import Panel from 'src/components/Panel.svelte';
-	import Prose from 'src/components/Prose.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
 	import TwoColumnLayout from './TwoColumnLayout.svelte';
 

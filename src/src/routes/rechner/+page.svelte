@@ -8,7 +8,6 @@
 		BestSimulationStore,
 		CountetSimulationStore,
 		NumberOfEntriesPerPageStore,
-		PaginatedSimulationStore,
 		SimulationStore
 	} from 'src/model/PortfolioStore';
 	import AssetGroupFilters from 'src/components/simulation/AssetGroupFilters.svelte';

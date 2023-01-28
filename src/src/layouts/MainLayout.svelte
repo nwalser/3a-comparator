@@ -5,7 +5,6 @@
 	import 'src/app.css';
 
 	export let pb: number = 56;
-	export let mt: number = 36;
 
 	let menuOpen = false;
 
@@ -21,9 +20,9 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col overflow-hidden">
-	<div class="bg-slate-800 relative z-0 overflow-hidden" style="padding-bottom: {pb / 4}rem;">
+	<div class="bg-slate-800 relative z-0 overflow-hidden mb-6">
 		<nav>
-			<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+			<div class="mx-auto max-w-7xl sm:px-6 lg:px-8" style="padding-bottom: {pb/4}rem;">
 				<div class="border-b border-gray-700">
 					<div class="flex h-16 items-center justify-between px-4 sm:px-0">
 						<div class="flex items-center">
@@ -112,7 +111,7 @@
 		<slot name="header" />
 	</div>
 
-	<main class="z-10 relative" style="margin-top: -{mt / 4}rem;">
+	<main class="z-10 relative">
 		<div
 			class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 text-slate-800"
 		>
@@ -120,9 +119,9 @@
 		</div>
 	</main>
 
-	<footer class="bg-white mt-auto">
+	<footer class="bg-slate-800 mt-auto">
 		<div class="mx-auto max-w-7xl overflow-hidden py-3 px-4 sm:px-6 lg:px-8">
-			<p class="mt-2 text-center text-base text-gray-700">
+			<p class="mt-2 text-center text-base text-gray-300">
 				&copy; {new Date().getFullYear()} Nathaniel Walser. All rights reserved. <a href="https://github.com/nwalser/3a-comparator" class="underline">Code verfügbar auf GitHub</a>
 			</p>
 		</div>
