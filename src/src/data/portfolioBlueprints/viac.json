@@ -1,0 +1,429 @@
+[
+    {
+        "id": "3a-konto",
+        "providerAbbreviation": "viac",
+        "name": "3a Konto",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 1.00,
+                "annualPerformance": 0.002
+            }
+        ]
+    },
+    {
+        "id": "konto-plus-global",
+        "providerAbbreviation": "viac",
+        "name": "Konto Plus Global",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.95,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.05
+            }
+        ]
+    },
+    {
+        "id": "global-20",
+        "providerAbbreviation": "viac",
+        "name": "Global 20",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0017
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.80,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.20
+            }
+        ]
+    },
+    {
+        "id": "global-40",
+        "providerAbbreviation": "viac",
+        "name": "Global 40",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0028
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.60,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.40
+            }
+        ]
+    },
+    {
+        "id": "global-60",
+        "providerAbbreviation": "viac",
+        "name": "Global 60",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0040
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.40,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.60
+            }
+        ]
+    },
+    {
+        "id": "global-80",
+        "providerAbbreviation": "viac",
+        "name": "Global 80",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0045
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.20,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.80
+            }
+        ]
+    },
+    {
+        "id": "global-100",
+        "providerAbbreviation": "viac",
+        "name": "Global 100",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0045
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "id": "konto-plus-schweiz",
+        "providerAbbreviation": "viac",
+        "name": "Konto Plus Schweiz",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.95,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.05
+            }
+        ]
+    },
+    {
+        "id": "schweiz-20",
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 20",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0018
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.80,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.20
+            }
+        ]
+    },
+    {
+        "id": "schweiz-40",
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 40",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0028
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.60,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.40
+            }
+        ]
+    },
+    {
+        "id": "schweiz-60",
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 60",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.40,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.60
+            }
+        ]
+    },
+    {
+        "id": "schweiz-80",
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 80",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0046
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.20,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.80
+            }
+        ]
+    },
+    {
+        "id": "schweiz-100",
+        "providerAbbreviation": "viac",
+        "name": "Schweiz 100",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0047
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "id": "konto-plus-nachhaltig",
+        "providerAbbreviation": "viac",
+        "name": "Konto Plus Nachhaltig",
+        "portfolioFees": [],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.95,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global ESG",
+                "assetGroup": "Stocks Global ESG",
+                "allocation": 0.05
+            }
+        ]
+    },
+    {
+        "id": "global-nachhaltig-20",
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 20",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0018
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.80,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global ESG",
+                "assetGroup": "Stocks Global ESG",
+                "allocation": 0.20
+            }
+        ]
+    },
+    {
+        "id": "global-nachhaltig-40",
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 40",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0030
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.60,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global ESG",
+                "assetGroup": "Stocks Global ESG",
+                "allocation": 0.40
+            }
+        ]
+    },
+    {
+        "id": "global-nachhaltig-60",
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 60",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0042
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.40,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global ESG",
+                "assetGroup": "Stocks Global ESG",
+                "allocation": 0.60
+            }
+        ]
+    },
+    {
+        "id": "global-nachhaltig-80",
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 80",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0052
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.20,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global ESG",
+                "assetGroup": "Stocks Global ESG",
+                "allocation": 0.80
+            }
+        ]
+    },
+    {
+        "id": "global-nachhaltig-100",
+        "providerAbbreviation": "viac",
+        "name": "Global Nachhaltig 100",
+        "portfolioFees": [
+            {
+                "name": "Gesammtkosten",
+                "type": "relative",
+                "value": 0.0053
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.002
+            },
+            {
+                "name": "Aktien Global ESG",
+                "assetGroup": "Stocks Global ESG",
+                "allocation": 0.99
+            }
+        ]
+    }
+]

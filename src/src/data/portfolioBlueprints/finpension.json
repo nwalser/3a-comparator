@@ -1,0 +1,380 @@
+[
+    {
+        "id": "aktien-0",
+        "providerAbbreviation": "finpension",
+        "name": "Aktien 0",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.99
+            }
+        ]
+    },
+    {
+        "id": "global-aktien-20",
+        "providerAbbreviation": "finpension",
+        "name": "Global Aktien 20",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.70,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.20,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "schweiz-aktien-20",
+        "providerAbbreviation": "finpension",
+        "name": "Schweiz Aktien 20",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.70,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.20,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "global-aktien-40",
+        "providerAbbreviation": "finpension",
+        "name": "Global Aktien 40",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.50,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.40,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "schweiz-aktien-40",
+        "providerAbbreviation": "finpension",
+        "name": "Schweiz Aktien 40",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.50,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.40,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "global-aktien-60",
+        "providerAbbreviation": "finpension",
+        "name": "Global Aktien 60",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.30,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.60,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "schweiz-aktien-60",
+        "providerAbbreviation": "finpension",
+        "name": "Schweiz Aktien 60",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.30,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.60,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "global-aktien-80",
+        "providerAbbreviation": "finpension",
+        "name": "Global Aktien 80",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.10,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.80,
+                "annualFees": 0.0002
+            }
+        ]
+    },
+    {
+        "id": "schweiz-aktien-80",
+        "providerAbbreviation": "finpension",
+        "name": "Schweiz Aktien 80",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Obligationen",
+                "assetGroup": "Bonds",
+                "allocation": 0.10,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Immobilien",
+                "assetGroup": "Real Estate",
+                "allocation": 0.09,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.80,
+                "annualFees": 0.0001
+            }
+        ]
+    },
+    {
+        "id": "global-aktien-100",
+        "providerAbbreviation": "finpension",
+        "name": "Global Aktien 100",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0002
+            },
+            {
+                "name": "Aktien Global",
+                "assetGroup": "Stocks Global",
+                "allocation": 0.99,
+                "annualFees": 0.0002
+            }
+        ]
+    },
+    {
+        "id": "schweiz-aktien-100",
+        "providerAbbreviation": "finpension",
+        "name": "Schweiz Aktien 100",
+        "portfolioFees": [
+            {
+                "name": "Pauschale Gebühr",
+                "type": "relative",
+                "value": 0.0039
+            }
+        ],
+        "assets": [
+            {
+                "name": "Geld",
+                "allocation": 0.01,
+                "annualPerformance": 0.00,
+                "annualFees": 0.0001
+            },
+            {
+                "name": "Aktien Schweiz",
+                "assetGroup": "Stocks Switzerland",
+                "allocation": 0.99,
+                "annualFees": 0.0001
+            }
+        ]
+    }
+]

@@ -38,7 +38,7 @@
 					</p>
 					<p>
 						Aktuell werden Produkte von <span class="font-bold"
-							>Finpension, Viac und TrueWealth verglichen.</span
+							>finpension, VIAC, frankly und TrueWealth verglichen.</span
 						>
 					</p>
 					<p>3A Produkte mit einer Versicherungskomponente werden nicht verglichen.</p>

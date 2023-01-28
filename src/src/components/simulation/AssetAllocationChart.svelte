@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Chart } from 'svelte-chartjs';
-	import colors from 'tailwindcss/colors';
 	import 'chart.js/auto';
 	import type { SecurityAsset } from 'src/model/Portfolio';
 	import { AssetGroupColorsStore } from 'src/model/AssetGroupColors';

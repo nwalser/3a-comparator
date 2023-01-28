@@ -1,13 +1,13 @@
 import { plainToInstance } from "class-transformer";
-import { derived, readable, writable } from "svelte/store";
-import { PortfolioBlueprint, AssetGroupPerformance, generatePortfolio } from "./PortfolioBuilder";
+import { derived, writable } from "svelte/store";
+import { AssetGroupPerformance, generatePortfolio } from "./PortfolioBuilder";
 
-import PortfolioBlueprints from 'src/data/PortfolioBlueprints.json';
 import AssetGroups from 'src/data/AssetGroups.json';
 
 import { simulatePortfolio, SimulationParameters } from "./Simulator";
 import { Provider, ProviderStore } from "./ProviderStore";
-import { AssetGroupFilter, AssetGroupFiltersStore } from "./Filters";
+import { AssetGroupFiltersStore } from "./Filters";
+import { PortfolioBlueprintStore } from "./PortfolioBlueprintStore";
 
 export const AgeStore = writable(20);
 export const LiquidationAgeStore = writable(65);
@@ -18,7 +18,6 @@ export const YearlyContributionsStore = writable(7056);
 export const CurrentPageStore = writable(0);
 export const NumberOfEntriesPerPageStore = writable(8);
 
-export const PortfolioBlueprintStore = readable(plainToInstance(PortfolioBlueprint, PortfolioBlueprints));
 
 export const FilteredPortfolioBlueprintStore = derived([PortfolioBlueprintStore, AssetGroupFiltersStore], ([$portfolioBlueprintStore, $assetGroupFiltersStore]) => {
     return $portfolioBlueprintStore.filter(p => $assetGroupFiltersStore.every(a => {
