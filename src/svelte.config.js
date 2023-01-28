@@ -6,13 +6,13 @@ import { mdsvex } from "mdsvex";
 const config = {
 	extensions: [
 		'.svelte',
-		'.svx'
+		'.md'
 	],
 
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: ['.svx'],
+			extensions: ['.md'],
 			layout: {
 				post: 'src/layouts/PostLayout.svelte',
 			},

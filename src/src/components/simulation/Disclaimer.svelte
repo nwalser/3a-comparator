@@ -16,7 +16,7 @@
 	</p>
 	<p class="text-sm pt-2">
 		Die ausgerechneten Werte sind immer im Bezug auf die vorgegebenen Renditen berechnet. Trotz der
-		Verwendung von modernen Modellen können <span class="font-bold"
+		Verwendung von modernen Modellen werden <span class="font-bold"
 			>die berechneten Werte von der Realität abweichen.</span
 		>
 	</p>

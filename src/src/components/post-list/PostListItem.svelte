@@ -5,7 +5,7 @@
 	export let aspect: string = 'aspect-[8/3]';
 </script>
 
-<div class="group relative flex flex-col overflow-hidden rounded-lg bg-white">
+<div class="group relative flex flex-col overflow-hidden rounded-sm bg-white">
 	{#if post.imageSrc}
 		<div class="bg-white">
 			<img src={post.imageSrc} alt={post.imageAlt} class="{aspect} object-fit object-center" />

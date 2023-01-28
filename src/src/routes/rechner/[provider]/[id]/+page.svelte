@@ -63,9 +63,11 @@
 						<SimulationHeader class="col-span-3" {simulation} />
 					</div>
 
-					<h2 class="mb-0">
+					<h2 class="mb-0 flex justify-between">
 						Gesamtkosten ({yearlyCostsText})
+						<a href="/blog/was-gibt-es-fuer-3a-konto-gebuehren" class="text-base no-underline">ⓘ</a>
 					</h2>
+
 					<div class="not-prose">
 						<PortfolioFees portfolio={simulation.portfolio} />
 					</div>
