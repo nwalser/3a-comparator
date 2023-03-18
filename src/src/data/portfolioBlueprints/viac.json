@@ -8,7 +8,7 @@
             {
                 "name": "Geld",
                 "allocation": 1.00,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             }
         ]
     },
@@ -21,7 +21,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.95,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global",
@@ -45,7 +45,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.80,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global",
@@ -69,7 +69,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.60,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global",
@@ -86,14 +86,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0040
+                "value": 0.0039
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.40,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global",
@@ -110,14 +110,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0045
+                "value": 0.0041
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.20,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global",
@@ -134,14 +134,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0045
+                "value": 0.0041
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.01,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global",
@@ -159,7 +159,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.95,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Schweiz",
@@ -176,14 +176,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0018
+                "value": 0.0017
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.80,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Schweiz",
@@ -207,7 +207,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.60,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Schweiz",
@@ -231,7 +231,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.40,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Schweiz",
@@ -248,14 +248,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0046
+                "value": 0.0042
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.20,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Schweiz",
@@ -272,14 +272,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0047
+                "value": 0.0043
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.01,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Schweiz",
@@ -297,7 +297,7 @@
             {
                 "name": "Geld",
                 "allocation": 0.95,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global ESG",
@@ -314,14 +314,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0018
+                "value": 0.0016
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.80,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global ESG",
@@ -338,14 +338,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0030
+                "value": 0.0028
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.60,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global ESG",
@@ -362,14 +362,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0042
+                "value": 0.0039
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.40,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global ESG",
@@ -386,14 +386,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0052
+                "value": 0.0043
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.20,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global ESG",
@@ -410,14 +410,14 @@
             {
                 "name": "Gesammtkosten",
                 "type": "relative",
-                "value": 0.0053
+                "value": 0.0044
             }
         ],
         "assets": [
             {
                 "name": "Geld",
                 "allocation": 0.01,
-                "annualPerformance": 0.002
+                "annualPerformance": 0.006
             },
             {
                 "name": "Aktien Global ESG",
